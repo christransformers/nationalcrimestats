@@ -1,259 +1,786 @@
 <!DOCTYPE html>
-<html lang="en" class="__className_646807">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crime Stats Australia</title>
-    <meta name="description" content="Explore crime statistics in Australian suburbs">
-    <link rel="icon" href="/icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles to match the exact visual spacing from the Next.js build */
-        details>summary {
-            list-style: none;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>NationalCrimeStats.com.au</title>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description"
+    content="NationalCrimeStats.com.au mirrors the familiar data.gov.au experience while focusing the homepage on national crime and safety data pathways.">
+  <link rel="canonical" href="https://crimestats.com.au/">
+  <link rel="icon" href="https://raw.githubusercontent.com/christransformers/2crimestats/main/cloned-site/www.data.gov.au/themes/custom/dga/favicon.ico" type="image/svg+xml">
+  <link rel="stylesheet" media="all"
+    href="https://www.data.gov.au/sites/default/files/css/css_oYbfP7KPe7Gb1BjA4vc1idhKuCY08Rx6yskR8MiJJps72cc.css?delta=0&amp;language=en&amp;theme=dga&amp;include=eJyNjEEOgzAMBD-UNE9CTnCDpdhG2dCK31fQQyV64TKH3dnN7gOj0zpl6l08Pb1ryNdUGaDKmJrUZfz35jOH4p1TcV3d2AYeVytGZdtualPxtqnhrq4kFuZKqTbP1CLG3sTqEZ3d9wIyOIKplyWcs9-bFLd0AAE7BmvKBA4v4TfSyYf6vDX-AEWJeRc">
+  <link rel="stylesheet" media="all"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" media="all"
+    href="https://www.data.gov.au/sites/default/files/css/css_TA7AB7hKjhiwEAPRRI7-lC28nYL2951TtHIuSuvc4uAf35c.css?delta=2&amp;language=en&amp;theme=dga&amp;include=eJyNjEEOgzAMBD-UNE9CTnCDpdhG2dCK31fQQyV64TKH3dnN7gOj0zpl6l08Pb1ryNdUGaDKmJrUZfz35jOH4p1TcV3d2AYeVytGZdtualPxtqnhrq4kFuZKqTbP1CLG3sTqEZ3d9wIyOIKplyWcs9-bFLd0AAE7BmvKBA4v4TfSyYf6vDX-AEWJeRc">
+  <style>
+    :root {
+      --ncs-header-blue: #094c7a;
+      --ncs-header-dark: #3b4d58;
+      --ncs-surface: #f3f6f8;
+      --ncs-line: #dbe5ea;
+      --ncs-ink: #1d2e3a;
+      --ncs-muted: #53646f;
+      --ncs-accent: #d95f38;
+    }
 
-        details>summary::-webkit-details-marker {
-            display: none;
-        }
-    </style>
+    body {
+      background: #fff;
+      color: var(--ncs-ink);
+    }
+
+    .navbar.bg-secondary {
+      background-color: var(--ncs-header-dark) !important;
+    }
+
+    .navbar.bg-primary {
+      background-color: var(--ncs-header-blue) !important;
+    }
+
+    .navbar-brand {
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .ncs-brand-logo {
+      max-width: 11.5rem;
+      width: 100%;
+      height: auto;
+      flex: 0 0 auto;
+    }
+
+    .ncs-brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+      line-height: 1.2;
+    }
+
+    .ncs-brand-title {
+      color: rgb(35, 120, 144);
+      font-size: 1.95rem;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+      overflow-wrap: anywhere;
+    }
+
+    .ncs-brand-note {
+      margin-top: 0.18rem;
+      margin-left: 8rem;
+      color: #204c5e !important;
+      font-size: 0.88rem;
+      font-weight: 500;
+      font-family: sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .banner-search-block {
+      background-image:
+        linear-gradient(90deg, rgba(9, 76, 122, 0.78), rgba(9, 76, 122, 0.58)),
+        url("https://www.data.gov.au/sites/default/files/banner-image-bg.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .banner-search-block .banner-overlay {
+      background: linear-gradient(90deg, rgba(4, 39, 65, 0.46), rgba(4, 39, 65, 0.22));
+    }
+
+    .banner-title {
+      max-width: 13ch;
+    }
+
+    .banner-subtitle {
+      max-width: 34rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .banner-form {
+      max-width: 54rem;
+    }
+
+    .hero-search-form .plain-search {
+      margin-bottom: 1rem;
+    }
+
+    .hero-search-form .form-control {
+      min-height: 3.5rem;
+    }
+
+    .hero-search-form .composite-search-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-search-form .composite-search-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 3.5rem;
+      width: auto;
+      min-width: 12.5rem;
+      border: 0;
+      border-radius: 0.4rem;
+      background: var(--ncs-accent);
+      color: #fff;
+      font-weight: 700;
+      padding-inline: 1.5rem;
+      box-shadow: 0 10px 24px rgba(23, 44, 63, 0.18);
+      transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .hero-search-form .composite-search-button:hover,
+    .hero-search-form .composite-search-button:focus-visible {
+      background: #bf4f2c;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(23, 44, 63, 0.22);
+    }
+
+    .hero-search-form .composite-search-button svg {
+      flex: 0 0 auto;
+    }
+
+    .hero-search-form .advanced-row {
+      display: none;
+      margin-top: 0.85rem;
+      padding: 1rem;
+      border-radius: 0.45rem;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(3px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-search-form .advanced-row.is-visible {
+      display: block;
+    }
+
+    .hero-search-form .advanced-row .form-select,
+    .hero-search-form .advanced-row .form-control {
+      min-height: 2.9rem;
+    }
+
+    .ncs-card-grid .card {
+      height: 100%;
+      border: 1px solid var(--ncs-line);
+      box-shadow: 0 10px 24px rgba(15, 52, 82, 0.06);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .ncs-card-grid .card:hover,
+    .ncs-card-grid .card:focus-within {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px rgba(15, 52, 82, 0.1);
+      border-color: #c6d8e3;
+    }
+
+    .ncs-card-grid .card-img-top {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--ncs-surface);
+    }
+
+    .ncs-card-grid .card-title {
+      color: var(--ncs-header-blue);
+      font-weight: 700;
+    }
+
+    .ncs-card-grid .card-text {
+      color: var(--ncs-muted);
+    }
+
+    .ncs-summary {
+      background: var(--ncs-surface);
+      border: 1px solid var(--ncs-line);
+      border-radius: 0.55rem;
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .ncs-summary .btn {
+      margin-top: 0.5rem;
+    }
+
+    .ncs-summary h3 {
+      color: var(--ncs-header-blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .ncs-summary p,
+    .ncs-summary li {
+      color: var(--ncs-muted);
+    }
+
+    .ncs-summary ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .ncs-metrics {
+      margin-bottom: 1.5rem;
+    }
+
+    .ncs-metric {
+      height: 100%;
+      background: #fff;
+      border: 1px solid var(--ncs-line);
+      border-radius: 0.55rem;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 6px 18px rgba(15, 52, 82, 0.04);
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .ncs-metric:hover {
+      border-color: #c6d8e3;
+      box-shadow: 0 10px 24px rgba(15, 52, 82, 0.08);
+    }
+
+    .ncs-metric-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--ncs-header-blue);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ncs-metric-value {
+      display: block;
+      color: var(--ncs-ink);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .ncs-metric-copy {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--ncs-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .ncs-quick-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .ncs-topic {
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.95rem;
+      transition: background-color 180ms ease, border-color 180ms ease;
+    }
+
+    .ncs-topic:hover,
+    .ncs-topic:focus-visible {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .ncs-section-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .ncs-section-heading h2 {
+      color: var(--ncs-header-blue);
+      font-size: 1.55rem;
+      margin: 0;
+    }
+
+    .ncs-section-heading p {
+      margin: 0;
+      color: var(--ncs-muted);
+      max-width: 38rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-brand {
+        max-width: calc(100% - 3.5rem);
+        gap: 0.75rem;
+      }
+
+      .ncs-brand-logo {
+        max-width: 9.5rem;
+      }
+
+      .ncs-brand-title {
+        font-size: 1rem;
+      }
+
+      .ncs-brand-note {
+        font-size: 0.8rem;
+      }
+
+      .banner-title {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .banner-subtitle {
+        font-size: 1rem;
+      }
+
+      .hero-search-form .composite-search-buttons {
+        align-items: stretch;
+      }
+
+      .hero-search-form .composite-search-button {
+        width: 100%;
+      }
+
+      .ncs-quick-topics {
+        gap: 0.5rem;
+      }
+
+      .ncs-topic {
+        width: 100%;
+        text-align: center;
+      }
+
+      .ncs-summary {
+        margin-top: 1rem;
+      }
+
+      .footer .col-md-6:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .ncs-brand-logo {
+        max-width: 7.5rem;
+      }
+
+      .ncs-brand-title {
+        font-size: 0.92rem;
+      }
+
+      .ncs-brand-note {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
 </head>
 
-<body style="background:#FFFFFF;color:#1A202C">
-    <main class="min-h-screen flex flex-col" style="background:#FFFFFF;color:#1A202C">
-        <header class="px-4 py-3 md:px-8 md:py-4 flex items-center justify-between"
-            style="border-bottom:1px solid #E2E8F0">
-            <div class="flex items-center gap-4">
-                <a aria-label="Crime Stats Australia home" href="/">
-                    <div class="flex items-center gap-2">
-                        <img src="https://www.data.gov.au/themes/custom/dga/logo.svg" alt="Home" class="img-fluid d-inline-block align-top">
-                        <span class="text-base md:text-[15px] font-semibold tracking-tight" style="color:#1A202C">Crime
-                            Stats AU</span>
-                    </div>
-                </a>
-            </div>
-            <nav class="flex items-center gap-4 md:gap-6 text-sm font-medium">
-                <a class="hover:opacity-80 transition-opacity" style="color:#1A202C;opacity:0.85"
-                    href="/suburbs">Suburbs</a>
-                <a class="hover:opacity-80 transition-opacity" style="color:#1A202C;opacity:0.85"
-                    href="/about">About</a>
-            </nav>
-        </header>
+<body class="layout-no-sidebars has-featured-top path-frontpage">
+  <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
 
-        <div class="flex-1">
-            <header class="relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-b from-sky-50 via-white to-white" aria-hidden="true"></div>
-                <svg class="absolute -right-24 -top-16 h-[420px] w-[420px] opacity-20 text-sky-200"
-                    viewBox="0 0 120 120" aria-hidden="true">
-                    <defs>
-                        <pattern id="dots" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
-                            <circle cx="1" cy="1" r="1" class="fill-current"></circle>
-                        </pattern>
-                    </defs>
-                    <rect width="120" height="120" fill="url(#dots)"></rect>
-                </svg>
-                <div class="mx-auto max-w-6xl px-4 pt-16 pb-10 md:pt-24 md:pb-16 relative">
-                    <nav class="hidden md:flex gap-6 text-sm text-gray-600 mb-6">
-                        <a href="#overview" class="hover:text-gray-900">Overview</a>
-                        <a href="/map" class="hover:text-gray-900">Map</a>
-                        <a href="#compare-suburbs" class="hover:text-gray-900">Compare</a>
-                        <a href="/methodology" class="hover:text-gray-900">Methodology</a>
-                        <a href="#faq" class="hover:text-gray-900">FAQ</a>
-                    </nav>
-                    <div class="text-center md:text-left" id="overview">
-                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Explore Crime Rates
-                            <span class="text-sky-700">Across Australia</span></h1>
-                        <p class="mt-4 text-lg text-gray-600">Search any suburb or postcode to view crime statistics,
-                            safety ratings, and trends.</p>
-                        <div class="mt-8">
+  <div id="page-wrapper">
+    <div id="page">
+      <header id="header" class="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-dark bg-secondary" id="navbar-top">
+          <div class="container">
+            <section class="row region region-top-header w-100">
+              <div class="clearfix nav flex-row block block-dga-main block-ckan-login-block w-100">
+                <div class="content ms-auto">
+                  <ul class="clearfix nav flex-row justify-content-end">
+                    <li class="nav-item">
+                      <a href="https://www.data.gov.au/data/user/login"
+                        class="nav-link nav-link--user-login text-decoration-none">Log in</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg" id="navbar-main">
+          <div class="container">
+            <a href="index.html" title="Home" rel="home" class="navbar-brand d-flex">
+              <img src="https://www.data.gov.au/themes/custom/dga/logo.svg" alt="Data.gov.au" class="ncs-brand-logo">
+              <span class="ncs-brand-copy">
+                <span class="ncs-brand-title">CrimeStats.com.au</span>
+                <span class="ncs-brand-note">by Data.gov.au</span>
+              </span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon d-lg-none"></span>
+            </button>
+
+            <div class="navbar-nav-search collapse navbar-collapse" id="navbarScroll">
+              <nav role="navigation" aria-label="Main navigation" class="block block-menu navigation menu--main">
+                <ul class="clearfix nav navbar-nav">
+                  <li class="nav-item"><a href="https://www.data.gov.au/data/dataset" class="nav-link">Datasets</a></li>
+                  <li class="nav-item"><a href="https://www.data.gov.au/data/organization"
+                      class="nav-link">Organisations</a></li>
+                  <li class="nav-item"><a href="https://www.data.gov.au/about" class="nav-link">About</a></li>
+                </ul>
+              </nav>
+
+              <div class="d-block d-lg-flex ms-lg-auto">
+                <div class="views-exposed-form block block-dga-main block-ckan-search-block">
+                  <div class="content">
+                    <div class="ckan-search-form">
+                      <form action="https://www.data.gov.au/search" method="get" accept-charset="UTF-8">
+                        <div class="d-flex flex-wrap">
+                          <div class="col-12">
                             <div
-                                class="mx-auto md:mx-0 max-w-xl rounded-2xl border border-gray-200 bg-white shadow-sm p-4">
-                                <div class="flex flex-col space-y-3 rounded-lg">
-                                    <div class="relative overflow-visible">
-                                        <div class="relative">
-                                            <input
-                                                class="w-full rounded-lg border py-3 pl-4 pr-10 text-sm sm:text-base font-medium shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent box-border"
-                                                style="background:#F8FAFC;color:#1A202C;border:1px solid #E2E8F0"
-                                                placeholder="Search suburbs or postcodes..."
-                                                aria-label="Search suburbs or postcodes" type="text">
-                                            <button class="group absolute inset-y-0 right-0 px-3" type="button"
-                                                aria-label="Search">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                                    fill="currentColor" aria-hidden="true" class="size-5 sm:size-4"
-                                                    style="color:#718096">
-                                                    <path fill-rule="evenodd"
-                                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                                        clip-rule="evenodd"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-4 flex flex-wrap gap-2 text-xs text-gray-500">
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 border border-sky-100"><span
-                                            aria-hidden="true">📍</span> 2,378 suburbs</span>
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 border border-emerald-100"><span
-                                            aria-hidden="true">📈</span> AU rate 56/1,000</span>
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-gray-50 px-2.5 py-1 border border-gray-200"><span
-                                            aria-hidden="true">🗓</span> Updated December 2025</span>
-                                </div>
+                              class="js-form-item js-form-type-textfield form-type-textfield js-form-item-key form-item-key mb-3">
+                              <label for="header-search">Search</label>
+                              <input
+                                class="lh-lg border-dga-light-blue form-control" type="text" id="header-search"
+                                name="key" value="" maxlength="128">
                             </div>
-                            <div class="mt-4 flex items-center gap-3">
-                                <a href="/map"
-                                    class="inline-flex items-center justify-center rounded-lg bg-sky-600 px-4 py-2.5 text-white font-medium hover:bg-sky-700">View
-                                    AU Crime Map<span class="ml-2" aria-hidden="true">↗</span></a>
-                                <a href="https://safesuburbs.co.nz/compare" class="text-sky-700 hover:underline">Compare
-                                    suburbs</a>
-                            </div>
+                          </div>
+                          <div class="form-actions js-form-wrapper form-wrapper mb-3">
+                            <button type="submit" class="button js-form-submit form-submit btn btn-primary"
+                              aria-label="Search">
+                              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7"></circle>
+                                <path d="m20 20-3.5-3.5"></path>
+                              </svg>
+                              <span class="visually-hidden">Search</span>
+                            </button>
+                          </div>
                         </div>
+                      </form>
                     </div>
+                  </div>
                 </div>
-            </header>
-
-            <main class="mx-auto max-w-6xl px-4">
-                <section class="mt-6 md:mt-10 grid gap-6 md:grid-cols-3">
-                    <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                        <h3 class="font-semibold text-gray-900 flex items-center gap-2"><span
-                                aria-hidden="true">🧭</span> National snapshot</h3>
-                        <p class="mt-2 text-sm text-gray-600">In the 12 months to December 2025, Australia's rate was
-                            <span class="font-medium text-gray-900">56</span> per 1,000 people, across 2,378 suburbs.
-                        </p>
-                        <a href="/map" class="mt-3 inline-block text-sm text-sky-700 hover:underline">Explore the
-                            map</a>
-                    </div>
-                    <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                        <h3 class="font-semibold text-gray-900 flex items-center gap-2"><span
-                                aria-hidden="true">📊</span> Compare regions</h3>
-                        <p class="mt-2 text-sm text-gray-600">See how Sydney, Melbourne, Brisbane, and regional
-                            Australia differ by offence type and trend.</p>
-                        <a href="#compare-suburbs"
-                            class="mt-3 inline-block text-sm text-sky-700 hover:underline">Compare suburbs</a>
-                    </div>
-                    <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                        <h3 class="font-semibold text-gray-900 flex items-center gap-2"><span
-                                aria-hidden="true">🛡</span> Home safety</h3>
-                        <p class="mt-2 text-sm text-gray-600">Considering an alarm? See recommended options based on
-                            your area's burglary rates.</p>
-                        <a href="#alarm-systems" class="mt-3 inline-block text-sm text-sky-700 hover:underline">See
-                            options</a>
-                    </div>
-                </section>
-
-                <section class="mt-12 md:mt-16" id="compare-suburbs">
-                    <div class="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
-                        <h2 class="text-2xl font-semibold text-gray-900">Compare AU Crime by Suburb</h2>
-                        <p class="mt-2 text-gray-700">Use suburb-level data to explore which parts of Australia are the
-                            safest. Compare crime rates, year-on-year trends, and offence types across the country.</p>
-                        <a class="mt-4 inline-flex items-center rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium hover:bg-gray-50"
-                            href="/suburbs">Browse all suburbs</a>
-                    </div>
-                </section>
-
-                <section class="mt-12 md:mt-16" id="alarm-systems">
-                    <div
-                        class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-600 p-6 md:p-8 text-white">
-                        <div class="absolute -right-8 -bottom-10 h-40 w-40 rounded-full bg-white/10" aria-hidden="true">
-                        </div>
-                        <h2 class="text-2xl font-semibold">Protect Your Home</h2>
-                        <p class="mt-2 text-white/90 max-w-2xl">Burglary and property crime affect many Australian
-                            suburbs. We've partnered with CompareSecurity.com.au to help you choose the best-rated alarm
-                            systems for your area.</p>
-                        <a href="https://comparesecurity.co.nz" target="_blank" rel="noopener noreferrer"
-                            class="mt-4 inline-flex items-center rounded-lg bg-white px-4 py-2.5 text-sky-700 font-medium hover:bg-gray-100">
-                            Compare Home Security Options <span class="ml-2" aria-hidden="true">↗</span>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="mt-12 md:mt-16" id="data-methodology">
-                    <div class="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
-                        <h2 class="text-2xl font-semibold text-gray-900">How We Source AU Crime Data</h2>
-                        <p class="mt-2 text-gray-700">We aggregate data from Australian Police crime statistics and
-                            calculate rates per 1,000 residents using the latest population estimates. Suburb-level data
-                            is refreshed monthly.</p>
-                        <a href="/about" class="mt-3 inline-block text-sky-700 hover:underline">Learn more about our
-                            methodology</a>
-                    </div>
-                </section>
-
-                <section class="mt-12 md:mt-16 mb-20" id="faq">
-                    <h2 class="text-2xl font-semibold text-gray-900">Frequently Asked Questions</h2>
-                    <div class="mt-4 divide-y divide-gray-200 rounded-2xl border border-gray-200 bg-white shadow-sm">
-                        <details class="p-5 group" open="">
-                            <summary class="flex cursor-pointer list-none items-center justify-between">
-                                <span class="font-medium text-gray-900">What is the crime rate in Australia?</span>
-                                <span class="text-gray-400 group-open:rotate-180 transition">⌄</span>
-                            </summary>
-                            <p class="mt-2 text-gray-700">The national rate is around 56 incidents per 1,000 people,
-                                varying by region and offence type.</p>
-                        </details>
-                        <details class="p-5 group">
-                            <summary class="flex cursor-pointer list-none items-center justify-between">
-                                <span class="font-medium text-gray-900">How often is CrimeStats.com.au updated?</span>
-                                <span class="text-gray-400 group-open:rotate-180 transition">⌄</span>
-                            </summary>
-                            <p class="mt-2 text-gray-700">Monthly, using official police statistics and population
-                                updates.</p>
-                        </details>
-                        <details class="p-5 group">
-                            <summary class="flex cursor-pointer list-none items-center justify-between">
-                                <span class="font-medium text-gray-900">Which suburbs are the safest?</span>
-                                <span class="text-gray-400 group-open:rotate-180 transition">⌄</span>
-                            </summary>
-                            <p class="mt-2 text-gray-700">Use our map and suburb pages to compare safety by postcode or
-                                region.</p>
-                        </details>
-                        <details class="p-5 group">
-                            <summary class="flex cursor-pointer list-none items-center justify-between">
-                                <span class="font-medium text-gray-900">Where does your data come from?</span>
-                                <span class="text-gray-400 group-open:rotate-180 transition">⌄</span>
-                            </summary>
-                            <p class="mt-2 text-gray-700">Australian Police, government open data, and local population
-                                statistics.</p>
-                        </details>
-                    </div>
-                </section>
-            </main>
-
-            <footer class="border-t border-gray-200 py-10 text-center text-sm text-gray-500">
-                Crime Stats AU © 2026. Data updates monthly. This platform is for information purposes only.
-            </footer>
-        </div>
-
-        <footer class="mt-12 py-8 px-4" style="border-top:1px solid #E2E8F0;background:#F8FAFC">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div class="flex items-center gap-4">
-                        <a aria-label="Crime Stats Australia home" href="/">
-                            <div class="flex items-center gap-2">
-                                <img src="https://www.data.gov.au/themes/custom/dga/logo.svg" alt="Home" class="img-fluid d-inline-block align-top">
-                                <span class="text-base md:text-[15px] font-semibold tracking-tight"
-                                    style="color:#1A202C">Crime Stats AU</span>
-                            </div>
-                        </a>
-                        <span class="text-sm" style="color:#4A5568">© 2026 All rights reserved</span>
-                    </div>
-                    <nav class="flex items-center space-x-6">
-                        <a class="text-sm hover:opacity-80 transition-opacity" style="color:#4A5568" href="/terms">Terms
-                            &amp; Conditions</a>
-                        <a class="text-sm hover:opacity-80 transition-opacity" style="color:#4A5568"
-                            href="/privacy">Privacy Policy</a>
-                        <a class="text-sm hover:opacity-80 transition-opacity" style="color:#4A5568"
-                            href="/about">About</a>
-                    </nav>
-                </div>
-                <div class="mt-4 pt-4" style="border-top:1px solid #E2E8F0">
-                    <p class="text-xs text-center" style="color:#718096">Crime data is sourced from official Australian
-                        Police statistics. This platform is for informational purposes only and should not be used as
-                        the sole basis for safety decisions.</p>
-                </div>
+              </div>
             </div>
-        </footer>
-    </main>
+          </div>
+        </nav>
+      </header>
+
+      <div class="highlighted">
+        <aside class="section clearfix" role="complementary">
+          <div class="block block-dga-main block-banner-search-block">
+            <div class="content">
+              <div class="banner-search-block">
+                <div class="banner-overlay">
+                  <div class="container px-md-5 px-xl-4">
+                    <div class="row justify-content-md-center">
+                      <div class="col-xl-11 col-sm-12 banner-wrapp">
+                        <h1 class="banner-title mb-4">Find, review and act on Australia's crime and safety data</h1>
+                        <p class="banner-subtitle mb-4">Search major crime, justice and community safety datasets, then
+                          move quickly into the official data.gov.au catalogue with more confidence and less noise.</p>
+
+                        <div class="banner-form search">
+                          <form class="ckan-search-form hero-search-form" id="hero-search-form"
+                            action="https://www.data.gov.au/search" method="get" accept-charset="UTF-8">
+                            <div class="plain-search">
+                              <div
+                                class="js-form-item js-form-type-textfield form-type-textfield js-form-item-q form-item-q">
+                                <label for="hero-query">Search</label>
+                                <input placeholder="Search by offence, dataset, publisher or place" autocomplete="off"
+                                  class="autocomplete-input ps-4 form-control" type="text" id="hero-query" name="key"
+                                  value="" maxlength="128">
+                              </div>
+                            </div>
+
+                            <div class="composite-search-buttons mt-2">
+                              <button class="composite-search-button button js-form-submit form-submit" type="submit">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                  <circle cx="11" cy="11" r="7"></circle>
+                                  <path d="m20 20-3.5-3.5"></path>
+                                </svg>
+                                <span>Find crime data</span>
+                              </button>
+                              <div class="form-check text-white mb-0">
+                                <input class="form-check-input" id="toggle-advanced-search" type="checkbox" value="1">
+                                <label class="form-check-label" for="toggle-advanced-search">Advanced Search</label>
+                              </div>
+                              <a href="https://solr.apache.org/guide/6_6/common-query-parameters.html" target="_blank"
+                                rel="noopener noreferrer" class="text-white text-decoration-none">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                  stroke-width="2" aria-hidden="true">
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 8h.01"></path>
+                                  <path d="M11 12h1v4h1"></path>
+                                </svg>
+                                <span class="visually-hidden">Search help</span>
+                              </a>
+                            </div>
+
+                            <div class="ncs-quick-topics" aria-label="Quick search topics">
+                              <button class="ncs-topic" type="button"
+                                data-topic="burglary New South Wales">Burglary</button>
+                              <button class="ncs-topic" type="button" data-topic="assault Victoria">Assault</button>
+                              <button class="ncs-topic" type="button" data-topic="family violence Queensland">Family
+                                violence</button>
+                              <button class="ncs-topic" type="button"
+                                data-topic="property crime local government">Property crime</button>
+                            </div>
+
+                            <div class="advanced-row" id="advanced-search-panel">
+                              <div class="row g-3">
+                                <div class="col-md-4">
+                                  <label class="form-label text-white" for="focus-select">Focus area</label>
+                                  <select class="form-select" id="focus-select">
+                                    <option value="">All focus areas</option>
+                                    <option value="burglary">Burglary</option>
+                                    <option value="assault">Assault</option>
+                                    <option value="family violence">Family violence</option>
+                                    <option value="property crime">Property crime</option>
+                                    <option value="road safety">Road safety</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-4">
+                                  <label class="form-label text-white" for="state-select">State or territory</label>
+                                  <select class="form-select" id="state-select">
+                                    <option value="">National</option>
+                                    <option value="New South Wales">New South Wales</option>
+                                    <option value="Victoria">Victoria</option>
+                                    <option value="Queensland">Queensland</option>
+                                    <option value="Western Australia">Western Australia</option>
+                                    <option value="South Australia">South Australia</option>
+                                    <option value="Tasmania">Tasmania</option>
+                                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+                                    <option value="Northern Territory">Northern Territory</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-4">
+                                  <label class="form-label text-white" for="timeframe-input">Timeframe</label>
+                                  <input class="form-control" id="timeframe-input" type="text"
+                                    placeholder="2024, last 5 years, monthly">
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div id="main-wrapper" class="layout-main-wrapper clearfix">
+        <div id="main" class="container">
+          <section class="section">
+            <a href="#main-content" id="main-content" tabindex="-1"></a>
+            <div class="row g-3 ncs-metrics">
+              <div class="col-md-4">
+                <div class="ncs-metric">
+                  <span class="ncs-metric-label">Faster review</span>
+                  <span class="ncs-metric-value">Move from a broad search to a source dataset in fewer clicks.</span>
+                  <span class="ncs-metric-copy">The homepage is tuned for the common admin workflow: find a topic,
+                    narrow by place or focus area, then hand off to the official catalogue.</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="ncs-metric">
+                  <span class="ncs-metric-label">Official pathways</span>
+                  <span class="ncs-metric-value">All major navigation routes continue through data.gov.au.</span>
+                  <span class="ncs-metric-copy">That keeps the experience familiar for analysts, publishers and staff
+                    who already work in the broader government data environment.</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="ncs-metric">
+                  <span class="ncs-metric-label">Operational support</span>
+                  <span class="ncs-metric-value">Clear local help details stay visible when you need them.</span>
+                  <span class="ncs-metric-copy">The support pathway is obvious without overwhelming the rest of the page
+                    or distracting from the core data discovery task.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ncs-section-heading">
+              <div>
+                <h2>Recommended starting points</h2>
+              </div>
+              <p>These entry points are designed for people who need to get to the right crime-data pathway quickly,
+                whether they are checking a national source, confirming guidance, or contacting the desk.</p>
+            </div>
+
+            <div class="row gy-4 ncs-card-grid">
+              <div class="col-xl-8">
+                <div class="row gy-4">
+                  <article class="col-md-4">
+                    <div class="card h-100 position-relative">
+                      <img src="https://raw.githubusercontent.com/christransformers/2crimestats/main/sites/default/files/styles/card_image/public/2025-06/recent-updated0079.jpg"
+                        class="card-img-top" alt="Australian city skyline and data photo" loading="lazy">
+                      <div class="card-body">
+                        <h2 class="h4 card-title">National datasets</h2>
+                        <p class="card-text">Review high-value crime, justice and safety collections from national,
+                          state and territory publishers before drilling into the official source records.</p>
+                        <a href="https://www.data.gov.au/search?key=crime"
+                          class="text-decoration-none stretched-link">Explore national datasets</a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="col-md-4">
+                    <div class="card h-100 position-relative">
+                      <img src="https://raw.githubusercontent.com/christransformers/2crimestats/main/sites/default/files/styles/card_image/public/2025-06/user-guide8d25.jpg"
+                        class="card-img-top" alt="Open laptop and documentation photo" loading="lazy">
+                      <div class="card-body">
+                        <h2 class="h4 card-title">Guidance and methodology</h2>
+                        <p class="card-text">Use the guide to understand metadata quality, licensing, formats and
+                          publisher responsibilities before relying on a dataset operationally.</p>
+                        <a href="https://www.data.gov.au/user-guide" class="text-decoration-none stretched-link">Open
+                          guidance</a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="col-md-4">
+                    <div class="card h-100 position-relative">
+                      <img src="https://raw.githubusercontent.com/christransformers/2crimestats/main/sites/default/files/styles/card_image/public/2025-06/need_support-updatedf292.jpg"
+                        class="card-img-top" alt="Support and communication photo" loading="lazy">
+                      <div class="card-body">
+                        <h2 class="h4 card-title">Support desk</h2>
+                        <p class="card-text">Reach the NationalCrimeStats helpdesk for catalogue support, local
+                          enquiries and operational questions. Email helpdesk@crimestats.com.au or call +61 434 048 798.
+                        </p>
+                        <a href="mailto:helpdesk@crimestats.com.au" class="text-decoration-none stretched-link">Contact
+                          the desk</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="ncs-summary">
+                  <h3>Operational snapshot</h3>
+                  <p>This homepage stays close to the data.gov.au visual language while giving crime and safety users a
+                    cleaner first decision point.</p>
+                  <ul>
+                    <li>Primary navigation and footer routes continue directly into official data.gov.au pages.</li>
+                    <li>Quick-topic buttons and advanced filters make the search feel more purposeful without changing
+                      the overall admin-style layout.</li>
+                    <li>The card row gives three clear next actions: review datasets, confirm guidance, or contact
+                      support.</li>
+                    <li>The page remains lightweight, mobile-friendly and self-contained.</li>
+                  </ul>
+                  <a href="https://www.data.gov.au/search?key=crime" class="btn btn-outline-primary btn-sm">Open the
+                    full catalogue</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="site-footer footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h6>Data.gov.au</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a href="https://www.data.gov.au/about" class="nav-link px-0">About</a></li>
+                <li class="nav-item"><a href="https://www.data.gov.au/privacy-policy" class="nav-link px-0">Privacy
+                    Policy</a></li>
+                <li class="nav-item"><a href="https://www.data.gov.au/recent-developments" class="nav-link px-0">Recent
+                    Developments</a></li>
+                <li class="nav-item"><a href="mailto:helpdesk@crimestats.com.au" class="nav-link px-0">Contact us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h6>Publishers</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a href="https://www.data.gov.au/data/user/login" class="nav-link px-0">Login</a>
+                </li>
+                <li class="nav-item"><a href="https://www.data.gov.au/user-guide" class="nav-link px-0">User guide</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h6>Developers</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a href="https://docs.ckan.org/en/2.11/api/index.html" class="nav-link px-0">CKAN
+                    Documentation</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h6>Footer</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a href="https://www.data.gov.au/accessibility"
+                    class="nav-link px-0">Accessibility</a></li>
+                <li class="nav-item"><a href="https://www.data.gov.au/about#terms-of-use"
+                    class="nav-link px-0">Copyright</a></li>
+                <li class="nav-item"><a href="https://www.data.gov.au/about#terms-of-use"
+                    class="nav-link px-0">Disclaimers</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-3 border-top">
+            <p class="mb-0">NationalCrimeStats.com.au presents a crime-focused front page while directing core
+              catalogue, publisher and policy journeys to data.gov.au. Helpdesk: helpdesk@crimestats.com.au | +61 434 048
+              798 | 161 O'Connell St, Kingswood NSW 2747.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const toggle = document.getElementById("toggle-advanced-search");
+      const panel = document.getElementById("advanced-search-panel");
+      const form = document.getElementById("hero-search-form");
+      const heroQuery = document.getElementById("hero-query");
+      const focus = document.getElementById("focus-select");
+      const state = document.getElementById("state-select");
+      const timeframe = document.getElementById("timeframe-input");
+      const topicButtons = document.querySelectorAll("[data-topic]");
+
+      toggle.addEventListener("change", function () {
+        panel.classList.toggle("is-visible", toggle.checked);
+      });
+
+      topicButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          heroQuery.value = button.getAttribute("data-topic") || "";
+          heroQuery.focus();
+        });
+      });
+
+      form.addEventListener("submit", function () {
+        const parts = [heroQuery.value.trim(), focus.value, state.value, timeframe.value.trim()].filter(Boolean);
+        heroQuery.value = parts.join(" ");
+      });
+    }());
+  </script>
 </body>
 
 </html>
