@@ -507,7 +507,8 @@
                         <div class="d-flex align-items-center p-3 mb-4 rounded" style="background: rgba(255, 255, 255, 0.12); border-left: 4px solid var(--ncs-accent); backdrop-filter: blur(4px); max-width: 54rem;">
                           <i class="bi bi-info-circle-fill text-white fs-4 me-3"></i>
                           <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.5;">
-                            <strong>Service Update:</strong> Please be advised that the Western Sydney compliance audit team is currently unavailable until <strong>20/04/2026</strong>. All other operations continue as normal.
+                            <strong>Service Update:</strong> Please be advised that the Western Sydney compliance audit team is currently unavailable until <strong>20/04/2026</strong>. All other operations continue as normal.<br>
+                            If you require assistance, please contact our helpdesk (Aleshia Gardener or Hazmati M. Syril) at <strong><a href="tel:0434048798" class="text-white text-decoration-none">0434 048 798</a></strong> or <a href="mailto:helpdesk@crimestats.com.au" class="text-white text-decoration-underline text-break">helpdesk@crimestats.com.au</a>.
                           </p>
                         </div>
 
@@ -713,57 +714,86 @@
         </div>
       </div>
 
-      <footer class="site-footer footer">
+      <style>
+        .footer-link-light { color: rgba(255, 255, 255, 0.65) !important; text-decoration: none; transition: color 0.2s ease, padding-left 0.2s ease; display: inline-block; }
+        .footer-link-light:hover { color: rgba(255, 255, 255, 1) !important; padding-left: 4px; }
+      </style>
+      <footer class="site-footer py-5 mt-5" style="background-color: var(--ncs-header-dark); color: rgba(255, 255, 255, 0.65);">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h6>Data.gov.au</h6>
-              <ul class="nav flex-column">
-                <li class="nav-item"><a href="https://www.data.gov.au/about" class="nav-link px-0">About</a></li>
-                <li class="nav-item"><a href="https://www.data.gov.au/privacy-policy" class="nav-link px-0">Privacy
-                    Policy</a></li>
-                <li class="nav-item"><a href="https://www.data.gov.au/recent-developments" class="nav-link px-0">Recent
-                    Developments</a></li>
-                <li class="nav-item"><a href="mailto:helpdesk@crimestats.com.au" class="nav-link px-0">Contact us</a>
-                </li>
+          <div class="row gy-5 mb-5">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <a href="index.html" class="d-inline-flex align-items-center mb-3 text-white text-decoration-none">
+                <i class="bi bi-shield-lock-fill fs-3 me-2" style="color: var(--ncs-accent);"></i>
+                <span class="fs-4 fw-semibold" style="letter-spacing: -0.02em;">NationalCrimeStats</span>
+              </a>
+              <p class="small mb-4 pe-lg-4" style="line-height: 1.6;">
+                Presenting a crime-focused front page while directing core catalogue, publisher and policy journeys to data.gov.au.
+              </p>
+              <div class="small bg-dark bg-opacity-25 d-inline-block px-3 py-2 rounded border border-secondary border-opacity-25 shadow-sm">
+                <strong class="text-white">ABN:</strong> 25 157 827 659
+              </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-4">
+              <h6 class="text-white mb-4 text-uppercase fw-bold" style="font-size: 0.8rem; letter-spacing: 0.08em;">Data.gov.au</h6>
+              <ul class="list-unstyled small mb-0">
+                <li class="mb-3"><a href="https://www.data.gov.au/about" class="footer-link-light">About</a></li>
+                <li class="mb-3"><a href="https://www.data.gov.au/privacy-policy" class="footer-link-light">Privacy Policy</a></li>
+                <li class="mb-3"><a href="https://www.data.gov.au/recent-developments" class="footer-link-light">Recent Developments</a></li>
+                <li class="mb-0"><a href="mailto:helpdesk@crimestats.com.au" class="footer-link-light">Contact us</a></li>
               </ul>
             </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h6>Publishers</h6>
-              <ul class="nav flex-column">
-                <li class="nav-item"><a href="https://www.data.gov.au/data/user/login" class="nav-link px-0">Login</a>
-                </li>
-                <li class="nav-item"><a href="https://www.data.gov.au/user-guide" class="nav-link px-0">User guide</a>
-                </li>
+            
+            <div class="col-lg-2 col-md-4">
+              <h6 class="text-white mb-4 text-uppercase fw-bold" style="font-size: 0.8rem; letter-spacing: 0.08em;">Resources</h6>
+              <ul class="list-unstyled small mb-0">
+                <li class="mb-3"><a href="https://www.data.gov.au/data/user/login" class="footer-link-light">Publisher Login</a></li>
+                <li class="mb-3"><a href="https://www.data.gov.au/user-guide" class="footer-link-light">User Guide</a></li>
+                <li class="mb-0"><a href="https://docs.ckan.org/en/2.11/api/index.html" class="footer-link-light">CKAN API Docs</a></li>
               </ul>
             </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h6>Developers</h6>
-              <ul class="nav flex-column">
-                <li class="nav-item"><a href="https://docs.ckan.org/en/2.11/api/index.html" class="nav-link px-0">CKAN
-                    Documentation</a></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-              <h6>Footer</h6>
-              <ul class="nav flex-column">
-                <li class="nav-item"><a href="https://www.data.gov.au/accessibility"
-                    class="nav-link px-0">Accessibility</a></li>
-                <li class="nav-item"><a href="https://www.data.gov.au/about#terms-of-use"
-                    class="nav-link px-0">Copyright</a></li>
-                <li class="nav-item"><a href="https://www.data.gov.au/about#terms-of-use"
-                    class="nav-link px-0">Disclaimers</a></li>
+            
+            <div class="col-lg-4 col-md-4">
+              <h6 class="text-white mb-4 text-uppercase fw-bold" style="font-size: 0.8rem; letter-spacing: 0.08em;">Contact & Support</h6>
+              <ul class="list-unstyled small mb-0" style="line-height: 1.6;">
+                <li class="mb-3 d-flex align-items-center">
+                  <div class="rounded-circle bg-white bg-opacity-10 d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">
+                    <i class="bi bi-envelope-fill" style="color: var(--ncs-accent);"></i>
+                  </div>
+                  <a href="mailto:helpdesk@crimestats.com.au" class="footer-link-light text-break" style="padding-left: 0 !important;">helpdesk@crimestats.com.au</a>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <div class="rounded-circle bg-white bg-opacity-10 d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">
+                    <i class="bi bi-telephone-fill" style="color: var(--ncs-accent);"></i>
+                  </div>
+                  <div>
+                    <a href="tel:0434048798" class="footer-link-light" style="padding-left: 0 !important;">+61 434 048 798</a> <span class="mx-2 opacity-50">|</span> <a href="tel:1300091012" class="footer-link-light" style="padding-left: 0 !important;">1300 091 012</a>
+                  </div>
+                </li>
+                <li class="mb-0 d-flex mt-4 pt-4 border-top border-secondary border-opacity-50">
+                  <div class="rounded-circle bg-white bg-opacity-10 d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 32px; height: 32px;">
+                    <i class="bi bi-geo-alt-fill" style="color: var(--ncs-accent);"></i>
+                  </div>
+                  <div>
+                    <span class="d-block text-white mb-1">Head Office</span>
+                    161 O'Connell St, Kingswood NSW 2747<br>
+                    <span class="d-block text-white mt-2 mb-1">Brisbane Office</span>
+                    Level 3/344 Queen St, Brisbane City QLD 4000
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
-
-          <div class="pt-3 border-top">
-            <p class="mb-0">NationalCrimeStats.com.au presents a crime-focused front page while directing core
-              catalogue, publisher and policy journeys to data.gov.au. Helpdesk: helpdesk@crimestats.com.au | +61 434 048
-              798 | 1300 091 012 | 161 O'Connell St, Kingswood NSW 2747 | Level 3/344 Queen St, Brisbane City QLD 4000.</p>
+          
+          <div class="pt-4 mt-4 border-top border-secondary border-opacity-50 d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+            <div class="small mb-3 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
+              <span>&copy; 2026 NationalCrimeStats.com.au. All rights reserved.</span>
+            </div>
+            <ul class="list-inline mb-0 small">
+              <li class="list-inline-item me-lg-4 me-3"><a href="https://www.data.gov.au/accessibility" class="footer-link-light" style="padding-left: 0 !important;">Accessibility</a></li>
+              <li class="list-inline-item me-lg-4 me-3"><a href="https://www.data.gov.au/about#terms-of-use" class="footer-link-light" style="padding-left: 0 !important;">Copyright</a></li>
+              <li class="list-inline-item"><a href="https://www.data.gov.au/about#terms-of-use" class="footer-link-light" style="padding-left: 0 !important;">Disclaimers</a></li>
+            </ul>
           </div>
         </div>
       </footer>
