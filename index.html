@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estate Fraud & Probate Dispute Lawyers — NSW & QLD | National Crime Stats</title>
 <meta name="description" content="Specialist lawyers for estate fraud, probate fraud, undue influence, executor misconduct, and elder financial abuse. NSW & QLD focused. Urgent advice available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:wght@600..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,12 +24,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo">
-      <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
-        <rect width="36" height="36" rx="6" fill="#1a2a3a"/>
-        <path d="M18 8L26 22H10L18 8Z" fill="#b8963e"/>
-        <circle cx="18" cy="21" r="3" fill="#d4af37"/>
-        <line x1="18" y1="24" x2="18" y2="30" stroke="#b8963e" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <img src="ncs_assets/ncs_logo.png" alt="National Crime Stats" class="logo-img" width="38" height="38">
       <span>National Crime <span class="logo-accent">Stats</span>
       <span class="logo-sub">Estate Fraud & Probate Disputes NSW + QLD</span></span>
     </a>
@@ -71,7 +69,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero has-bg" style="background-image:url('ncs_assets/hero_banner_dark_wide.png');">
   <div class="hero-pattern"></div>
   <svg class="hero-illustration" viewBox="0 0 280 280" fill="none">
     <!-- Scales of Justice -->
@@ -158,6 +156,14 @@
 <!-- SECTION ORNAMENT -->
 <div class="section-ornament"><span class="ornament-line"></span><span class="ornament-dot"></span><span class="ornament-line"></span></div>
 
+<!-- PROBLEM SPOTLIGHT BANNER -->
+<div class="section-banner section-banner-light" style="background-image:url('ncs_assets/banner_light_section.png');">
+  <div class="section-banner-inner">
+    <h2 class="section-title">Every estate dispute starts with a suspicion</h2>
+    <p class="section-subtitle">If something doesn't feel right about a will, an estate, or how an executor is handling things — you're probably correct to ask questions.</p>
+  </div>
+</div>
+
 <!-- PROBLEM OVERVIEW -->
 <section class="section section-alt">
   <div class="section-inner">
@@ -165,6 +171,7 @@
     <p class="section-subtitle reveal">These are serious legal problems that affect real families. Each requires specific knowledge of succession law, evidence rules, and court process.</p>
     <div class="card-grid card-grid-2 reveal-stagger">
       <div class="card">
+        <img src="ncs_assets/card_image_01.png" alt="Estate fraud legal services" class="card-img-top" loading="lazy">
         <div class="card-icon card-icon-navy">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 11h3"/></svg>
         </div>
@@ -307,6 +314,8 @@
   <div class="section-inner">
     <h2 class="section-title reveal">NSW & QLD: Different laws, different processes</h2>
     <p class="section-subtitle reveal">Estate and probate law is state-specific. What applies in NSW may not apply in Queensland.</p>
+    <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:280px;">
     <div class="card-grid card-grid-2 reveal-stagger">
       <div class="card" style="border-top:4px solid var(--navy);">
         <div class="card-icon card-icon-navy">
@@ -326,6 +335,12 @@
         <p style="font-size:0.85rem;color:var(--gray-500);">Key areas: s 10 signature position, s 24 lost will presumption, s 18 dispensing power, Criminal Code s 488 (will forgery — 14 years), QCAT for EPOA disputes.</p>
         <a href="/qld/" class="btn btn-dark btn-sm">QLD Law Hub <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
+    </div>
+    </div>
+    <div style="flex-shrink:0;text-align:center;padding:20px;">
+      <img src="ncs_assets/australia_globe_map.png" alt="Australia estate dispute coverage" class="globe-map" style="max-width:240px;">
+      <p style="font-size:0.8rem;color:var(--gray-500);margin-top:8px;">Dual-state coverage<br>NSW & Queensland</p>
+    </div>
     </div>
   </div>
 </section>
@@ -498,7 +513,14 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer has-bg" style="background-image:url('ncs_assets/footer_background_navy.png');">
+  <div class="footer-brand">
+    <img src="ncs_assets/ncs_logo.png" alt="National Crime Stats" class="footer-logo" width="48" height="48">
+    <div>
+      <span class="footer-site-name">National Crime <span style="color:var(--cta-gold);">Stats</span></span>
+      <span class="footer-tagline">Estate Fraud & Probate Dispute Lawyers — NSW & QLD</span>
+    </div>
+  </div>
   <div class="footer-inner">
     <div class="footer-col">
       <h4>Practice Areas</h4>
@@ -561,18 +583,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('.primary-nav');
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      const isOpen = nav.style.display === 'flex';
-      nav.style.display = isOpen ? 'none' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'absolute';
-      nav.style.top = '100%';
-      nav.style.left = '0';
-      nav.style.right = '0';
-      nav.style.background = 'white';
-      nav.style.padding = '20px';
-      nav.style.borderBottom = '1px solid var(--border)';
-      nav.style.boxShadow = 'var(--shadow-md)';
-      nav.style.zIndex = '99';
+      nav.classList.toggle('mobile-open');
     });
   }
 
