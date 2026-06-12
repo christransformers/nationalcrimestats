@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Centre — Legal Guides on Estate Fraud, Probate, Wills & Inheritance | NSW & QLD</title>
+<meta name="description" content="Comprehensive legal guides on executor rights, beneficiary rights, undue influence, elder financial abuse, and probate disputes. NSW and Queensland focused. Start here for authoritative information.">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => btn.parentElement.classList.toggle('open'));
+  });
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '100%';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'white';
+      nav.style.padding = '20px';
+      nav.style.borderBottom = '1px solid var(--border)';
+      nav.style.boxShadow = 'var(--shadow-md)';
+    });
+  }
+  // Simple search filter
+  const filterInput = document.getElementById('guide-filter');
+  if (filterInput) {
+    filterInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('.guide-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+});
+</script>
+<style>
+  .guide-hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: var(--white); }
+  .guide-hero-inner { max-width: var(--max-width); margin: 0 auto; }
+  .guide-hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; }
+  .guide-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto 24px; }
+  .search-box { max-width: 500px; margin: 0 auto; }
+  .search-box input { width: 100%; padding: 14px 20px; border: 2px solid rgba(255,255,255,0.2); border-radius: 30px; background: rgba(255,255,255,0.1); color: white; font-size: 1rem; outline: none; }
+  .search-box input::placeholder { color: rgba(255,255,255,0.5); }
+  .search-box input:focus { border-color: var(--gold); background: rgba(255,255,255,0.15); }
+  .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .featured-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; border-top: 4px solid var(--gold); }
+  .featured-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
+  .featured-card p { font-size: 0.9rem; color: var(--gray-600); margin-bottom: 16px; line-height: 1.6; }
+  .category-section { margin-bottom: 40px; }
+  .category-section h3 { font-size: 1.3rem; color: var(--navy); padding-bottom: 8px; border-bottom: 2px solid var(--gold); margin-bottom: 20px; }
+  .guide-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 12px; transition: box-shadow 0.2s; }
+  .guide-card:hover { box-shadow: var(--shadow-md); }
+  .guide-card h4 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+  .guide-card h4 a { color: var(--navy); text-decoration: none; }
+  .guide-card h4 a:hover { color: var(--gold); }
+  .guide-card p { font-size: 0.85rem; color: var(--gray-500); }
+  .popular-item { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100); }
+  .popular-item a { color: var(--navy); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+  .popular-item a:hover { color: var(--gold); }
+  .popular-num { color: var(--gold); font-weight: 700; font-size: 1.1rem; margin-right: 12px; min-width: 24px; }
+  @media (max-width: 768px) { .featured-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="utility-bar">
+  <div class="utility-bar-inner">
+    <span>NSW + QLD Estate & Probate Dispute Lawyers</span>
+    <span>&#128222; 1800 XXX XXX &nbsp;|&nbsp; Confidential review available</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      National Crime <span class="logo-accent">Stats</span>
+      <span class="logo-sub">Estate Fraud & Probate Disputes NSW + QLD</span>
+    </a>
+    <button class="mobile-nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav class="primary-nav">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/nsw/">NSW</a>
+      <a href="/qld/">QLD</a>
+      <a href="/for-executors/">For Executors</a>
+      <a href="/for-beneficiaries/">For Beneficiaries</a>
+      <a href="/guides/" class="active">Guides</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/urgent-help/" class="nav-cta">Urgent Help</a>
+    </nav>
+  </div>
+</header>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <span>NSW + QLD Focused</span>
+    <span>Probate & Estate Disputes</span>
+    <span>Elder Financial Abuse Matters</span>
+    <span>Urgent Advice Available</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="guide-hero">
+  <div class="guide-hero-inner">
+    <h1>Knowledge Centre — Legal Guides for Estate &amp; Probate Matters</h1>
+    <p>Authoritative, plain-language guides on executor duties, beneficiary rights, undue influence, elder financial abuse, and probate disputes. Written for people navigating complex estate issues across New South Wales and Queensland.</p>
+    <div class="search-box">
+      <input type="text" id="guide-filter" placeholder="Search all guides by topic or keyword...">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED GUIDES -->
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Featured Guides</h2>
+    <p class="section-subtitle">Start here for the most commonly sought information on estate and probate disputes.</p>
+    <div class="featured-grid">
+      <div class="featured-card">
+        <h3>Executor Rights &amp; Limits</h3>
+        <p>What executors can and cannot do, common traps, when to seek legal advice, and how NSW and Queensland law differ on executor obligations.</p>
+        <a href="/guides/executor-rights-and-limits/" class="card-link">Read the guide &#8594;</a>
+      </div>
+      <div class="featured-card">
+        <h3>Beneficiary Rights &amp; Limits</h3>
+        <p>What beneficiaries may ask for, what they cannot assume, disputes with executors, and when to challenge the will instead of waiting.</p>
+        <a href="/guides/beneficiary-rights-and-limits/" class="card-link">Read the guide &#8594;</a>
+      </div>
+      <div class="featured-card">
+        <h3>Undue Influence in Wills — NSW &amp; QLD</h3>
+        <p>Persuasion vs coercion, case-pattern examples, evidence requirements, the high proof burden under Briginshaw, and state-specific notes.</p>
+        <a href="/guides/undue-influence-nsw-qld/" class="card-link">Read the guide &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY BLOCKS -->
+<section class="section section-alt">
+  <div class="section-inner">
+
+    <div class="category-section">
+      <h3>Probate Basics</h3>
+      <div class="guide-card">
+        <h4><a href="/glossary/">Understanding Probate — A Plain-Language Overview</a></h4>
+        <p>What probate is, when it is required, how long it takes in NSW and QLD, and what happens when there is no will (intestacy).</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/process/">The Estate Dispute Process — Step by Step</a></h4>
+        <p>From initial review and evidence gathering through negotiation, mediation, and court proceedings. What to expect at each stage.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Challenging a Will</h3>
+      <div class="guide-card">
+        <h4><a href="/services/challenging-a-will/">Grounds for Challenging a Will</a></h4>
+        <p>Undue influence, lack of capacity, fraud, forgery, suspicious circumstances, and want of knowledge and approval — plus the evidence each requires.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/guides/undue-influence-nsw-qld/">Undue Influence — NSW &amp; QLD Deep Guide</a></h4>
+        <p>The most complete guide on this site to proving coercion in will-making, with case patterns, evidence checklists, and state-by-state analysis.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Defending a Will</h3>
+      <div class="guide-card">
+        <h4><a href="/services/defending-a-will/">Defending a Valid Will Against Challenge</a></h4>
+        <p>For executors and beneficiaries upholding a will. Evidence of capacity, proper execution, independent advice, and the presumption of validity.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Executors</h3>
+      <div class="guide-card">
+        <h4><a href="/guides/executor-rights-and-limits/">Executor Rights &amp; Limits — Full Guide</a></h4>
+        <p>Your duties, what you can and cannot do, common traps, state differences, and when to seek professional advice.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/services/executor-misconduct/">Executor Misconduct — Grounds for Removal</a></h4>
+        <p>What constitutes misconduct, how beneficiaries can seek removal, and what the court considers when deciding whether to replace an executor.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/for-executors/">Executor Resources Hub</a></h4>
+        <p>Curated information for executors administering estates in NSW and Queensland, from probate applications to beneficiary disputes.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Beneficiaries</h3>
+      <div class="guide-card">
+        <h4><a href="/guides/beneficiary-rights-and-limits/">Beneficiary Rights &amp; Limits — Full Guide</a></h4>
+        <p>What information you can request, when executor delay becomes actionable, and the difference between challenging a will and asserting beneficiary rights.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/services/beneficiary-rights/">Beneficiary Rights — What You Can Ask For</a></h4>
+        <p>Your entitlement to accounts, information, and transparency. What to do when an executor refuses to communicate.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/for-beneficiaries/">Beneficiary Resources Hub</a></h4>
+        <p>Information and guidance for beneficiaries concerned about delay, non-disclosure, or suspicious estate administration.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Elder Abuse</h3>
+      <div class="guide-card">
+        <h4><a href="/guides/elder-financial-abuse-wills-inheritance/">Elder Financial Abuse — Wills &amp; Inheritance</a></h4>
+        <p>Signs and red flags, before-death steps, after-death estate disputes, POA overlap, and service contacts including 1800 ELDERHelp.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/services/elder-financial-abuse-inheritance/">Elder Financial Abuse &amp; Inheritance Pressure</a></h4>
+        <p>How abuse manifests in estate planning, warning signs, reporting pathways, and the intersection with POA misuse.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/services/power-of-attorney-abuse-estates/">Power of Attorney Abuse &amp; Estate Impact</a></h4>
+        <p>How POA misuse depletes estates, tribunal pathways in NCAT and QCAT, and how POA abuse intersects with will disputes.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>State-Specific — NSW</h3>
+      <div class="guide-card">
+        <h4><a href="/nsw/">NSW Estate Disputes Hub</a></h4>
+        <p>Succession Act 2006, probate timelines, caveat procedure, family provision claims under Chapter 3, NCAT for POA disputes.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/nsw/probate-timeline/">NSW Probate Timeline — What to Expect</a></h4>
+        <p>Six-month expectation, court processing times, requisition responses, and what happens when probate is contested.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>State-Specific — QLD</h3>
+      <div class="guide-card">
+        <h4><a href="/qld/">QLD Estate Disputes Hub</a></h4>
+        <p>Succession Act 1981, s 10(2) signature rule, s 24 lost will presumption, Criminal Code s 488 forgery penalty, QCAT for EPOA.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/qld/poa-abuse-and-qcat/">QLD POA Abuse &amp; QCAT Pathways</a></h4>
+        <p>How QCAT handles enduring power of attorney disputes, review of attorney conduct, and the role of the Public Guardian.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Evidence &amp; Documents</h3>
+      <div class="guide-card">
+        <h4><a href="/evidence/">Evidence Collection Guide</a></h4>
+        <p>What documents to gather, how to preserve evidence, the importance of solicitor files, medical records, and financial statements.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/checklists/documents-to-gather/">Documents to Gather Checklist</a></h4>
+        <p>A scannable checklist of critical documents for any estate dispute — from wills and codicils to bank statements and medical records.</p>
+      </div>
+    </div>
+
+    <div class="category-section">
+      <h3>Checklists &amp; Quick-Reference</h3>
+      <div class="guide-card">
+        <h4><a href="/checklists/suspected-estate-fraud/">Suspected Estate Fraud Checklist</a></h4>
+        <p>Red flags, immediate steps, what not to do, and documents to gather when you suspect fraud in an estate.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/checklists/suspected-undue-influence/">Suspected Undue Influence Checklist</a></h4>
+        <p>Warning signs, evidence checklist, and protective steps when you suspect coercion in will-making.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/checklists/executor-first-steps/">Executor First Steps Checklist</a></h4>
+        <p>What to do in the first days and weeks after being appointed executor — securing assets, locating the will, and communicating with beneficiaries.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/checklists/beneficiary-concern-checklist/">Beneficiary Concern Checklist</a></h4>
+        <p>Steps to take when you are a beneficiary and something feels wrong — from information requests to legal action.</p>
+      </div>
+      <div class="guide-card">
+        <h4><a href="/checklists/elder-coercion-warning-signs/">Elder Coercion Warning Signs</a></h4>
+        <p>Recognise the signs of elder coercion in estate planning — isolation, dependency, rapid will changes, and controlling behaviour.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPULAR SECTIONS -->
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Most Popular Topics</h2>
+    <p class="section-subtitle">The questions and topics our readers search for most often.</p>
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <div class="popular-item"><span class="popular-num">01</span><a href="/guides/executor-rights-and-limits/#what-executors-can-do">What an executor can and cannot do</a></div>
+        <div class="popular-item"><span class="popular-num">02</span><a href="/guides/beneficiary-rights-and-limits/#what-beneficiaries-may-ask-for">What information beneficiaries can request</a></div>
+        <div class="popular-item"><span class="popular-num">03</span><a href="/guides/undue-influence-nsw-qld/#persuasion-vs-coercion">Persuasion vs coercion — the legal difference</a></div>
+        <div class="popular-item"><span class="popular-num">04</span><a href="/guides/undue-influence-nsw-qld/#evidence-section">Evidence needed to prove undue influence</a></div>
+        <div class="popular-item"><span class="popular-num">05</span><a href="/guides/elder-financial-abuse-wills-inheritance/#signs-and-red-flags">Red flags of elder financial abuse in inheritance</a></div>
+      </div>
+      <div class="card">
+        <div class="popular-item"><span class="popular-num">06</span><a href="/guides/executor-rights-and-limits/#common-traps">Common traps for executors</a></div>
+        <div class="popular-item"><span class="popular-num">07</span><a href="/guides/beneficiary-rights-and-limits/#disputes-with-executors">How to handle disputes with an executor</a></div>
+        <div class="popular-item"><span class="popular-num">08</span><a href="/guides/elder-financial-abuse-wills-inheritance/#before-death-steps">What to do before death if you suspect abuse</a></div>
+        <div class="popular-item"><span class="popular-num">09</span><a href="/guides/executor-rights-and-limits/#state-differences">NSW vs QLD executor obligations</a></div>
+        <div class="popular-item"><span class="popular-num">10</span><a href="/guides/undue-influence-nsw-qld/#proof-burden">The Briginshaw standard explained</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section section-dark">
+  <div class="section-inner" style="text-align:center;">
+    <h2 class="section-title">Need advice specific to your situation?</h2>
+    <p class="section-subtitle" style="margin:0 auto 24px;">These guides provide general information. For advice tailored to your circumstances — especially if you are concerned about a will, executor conduct, or elder abuse — speak with a specialist estate disputes lawyer.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a Confidential Review</a>
+      <a href="/urgent-help/" class="btn btn-outline btn-lg">Urgent Help</a>
+      <a href="/checklists/documents-to-gather/" class="btn btn-outline btn-lg">Document Checklist</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Practice Areas</h4>
+      <a href="/services/estate-fraud/">Estate Fraud</a>
+      <a href="/services/probate-fraud/">Probate Fraud</a>
+      <a href="/services/undue-influence-wills/">Undue Influence</a>
+      <a href="/services/elder-financial-abuse-inheritance/">Elder Financial Abuse</a>
+      <a href="/services/executor-misconduct/">Executor Misconduct</a>
+      <a href="/services/beneficiary-rights/">Beneficiary Rights</a>
+    </div>
+    <div class="footer-col">
+      <h4>State Hubs</h4>
+      <a href="/nsw/">NSW Estate Disputes</a>
+      <a href="/qld/">QLD Estate Disputes</a>
+      <a href="/nsw/probate-timeline/">NSW Probate Timeline</a>
+      <a href="/qld/poa-abuse-and-qcat/">QLD POA & QCAT</a>
+    </div>
+    <div class="footer-col">
+      <h4>Audience Hubs</h4>
+      <a href="/for-executors/">For Executors</a>
+      <a href="/for-beneficiaries/">For Beneficiaries</a>
+      <a href="/for-families/">For Families & Supporters</a>
+      <a href="/guides/">Legal Guides</a>
+      <a href="/evidence/">Evidence & Documents</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact & Info</h4>
+      <a href="/contact/">Contact Us</a>
+      <a href="/urgent-help/">Urgent Help</a>
+      <a href="/about/">About</a>
+      <a href="/fees/">Fees</a>
+      <a href="/disclaimer/">Disclaimer</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>This website provides general information only and does not constitute legal advice. You should obtain specific advice relevant to your circumstances. Liability limited by a scheme approved under Professional Standards Legislation.</p>
+    <p style="margin-top:8px;">&copy; 2026 National Crime Stats. All rights reserved. &nbsp;|&nbsp; <a href="/disclaimer/">Disclaimer</a> &nbsp;|&nbsp; <a href="/privacy/">Privacy</a> &nbsp;|&nbsp; <a href="/terms/">Terms</a> &nbsp;|&nbsp; <a href="/accessibility/">Accessibility</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
