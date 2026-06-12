@@ -6,34 +6,6 @@
 <title>Estate Fraud & Probate Dispute Lawyers — NSW & QLD | National Crime Stats</title>
 <meta name="description" content="Specialist lawyers for estate fraud, probate fraud, undue influence, executor misconduct, and elder financial abuse. NSW & QLD focused. Urgent advice available.">
 <link rel="stylesheet" href="css/style.css">
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  // FAQ accordion
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      item.classList.toggle('open');
-    });
-  });
-  // Mobile nav toggle
-  const toggle = document.querySelector('.mobile-nav-toggle');
-  const nav = document.querySelector('.primary-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'absolute';
-      nav.style.top = '100%';
-      nav.style.left = '0';
-      nav.style.right = '0';
-      nav.style.background = 'white';
-      nav.style.padding = '20px';
-      nav.style.borderBottom = '1px solid var(--border)';
-      nav.style.boxShadow = 'var(--shadow-md)';
-    });
-  }
-});
-</script>
 </head>
 <body>
 
@@ -41,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <div class="utility-bar">
   <div class="utility-bar-inner">
     <span>NSW + QLD Estate & Probate Dispute Lawyers</span>
-    <span>📞 1800 XXX XXX &nbsp;|&nbsp; Confidential review available</span>
+    <span>Confidential review available — 1800 XXX XXX</span>
   </div>
 </div>
 
@@ -49,10 +21,18 @@ document.addEventListener('DOMContentLoaded', function(){
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo">
-      National Crime <span class="logo-accent">Stats</span>
-      <span class="logo-sub">Estate Fraud & Probate Disputes NSW + QLD</span>
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="6" fill="#1a2a3a"/>
+        <path d="M18 8L26 22H10L18 8Z" fill="#b8963e"/>
+        <circle cx="18" cy="21" r="3" fill="#d4af37"/>
+        <line x1="18" y1="24" x2="18" y2="30" stroke="#b8963e" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>National Crime <span class="logo-accent">Stats</span>
+      <span class="logo-sub">Estate Fraud & Probate Disputes NSW + QLD</span></span>
     </a>
-    <button class="mobile-nav-toggle" aria-label="Menu">☰</button>
+    <button class="mobile-nav-toggle" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
     <nav class="primary-nav">
       <a href="/" class="active">Home</a>
       <a href="/services/">Services</a>
@@ -71,27 +51,65 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-strip-inner">
-    <span>NSW + QLD Focused</span>
-    <span>Probate & Estate Disputes</span>
-    <span>Elder Financial Abuse Matters</span>
-    <span>Urgent Advice Available</span>
+    <span class="trust-item">
+      <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="8,3 10,7 14,7 11,10 12,14 8,11.5 4,14 5,10 2,7 6,7" fill="currentColor"/></svg>
+      NSW + QLD Focused
+    </span>
+    <span class="trust-item">
+      <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="12" height="10" rx="1"/><line x1="5" y1="7" x2="11" y2="7"/><line x1="5" y1="10" x2="9" y2="10"/></svg>
+      Probate & Estate Disputes
+    </span>
+    <span class="trust-item">
+      <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2 L14 5 L8 8 L2 5 Z"/><path d="M2 8 L8 11 L14 8"/><line x1="8" y1="8" x2="8" y2="14"/></svg>
+      Elder Financial Abuse Matters
+    </span>
+    <span class="trust-item">
+      <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><polyline points="8,4 8,8 11,10"/></svg>
+      Urgent Advice Available
+    </span>
   </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="hero-pattern"></div>
+  <svg class="hero-illustration" viewBox="0 0 280 280" fill="none">
+    <!-- Scales of Justice -->
+    <g opacity="0.6" stroke="white" stroke-width="1.5">
+      <line x1="140" y1="30" x2="140" y2="100"/>
+      <line x1="80" y1="100" x2="200" y2="100"/>
+      <path d="M80,100 L60,160 L100,160 Z" fill="none"/>
+      <path d="M200,100 L180,160 L220,160 Z" fill="none"/>
+      <line x1="80" y1="130" x2="100" y2="130"/>
+      <line x1="180" y1="130" x2="200" y2="130"/>
+      <circle cx="140" cy="170" r="3"/>
+      <line x1="140" y1="173" x2="140" y2="230"/>
+      <path d="M110,230 L170,230 L160,250 L120,250 Z" fill="none"/>
+    </g>
+    <!-- Decorative circles -->
+    <circle cx="220" cy="60" r="40" stroke="white" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="220" cy="60" r="28" stroke="white" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="60" cy="200" r="36" stroke="white" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="60" cy="200" r="24" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  </svg>
+  <div class="hero-inner reveal">
     <h1>Estate Fraud, Probate Disputes & Coercion in Wills — NSW & QLD</h1>
     <p>If you suspect a will was forged, changed under pressure, or that estate assets are being concealed — you need specific legal advice fast. We focus exclusively on estate and probate disputes across NSW and Queensland.</p>
     <div class="hero-buttons">
-      <a href="/urgent-help/" class="btn btn-primary btn-lg">Get Urgent Advice</a>
-      <a href="/start-here/" class="btn btn-outline btn-lg">See Your Legal Pathway</a>
+      <a href="/urgent-help/" class="btn btn-primary btn-lg">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="8"/><polyline points="10,5 10,10 13,12"/></svg>
+        Get Urgent Advice
+      </a>
+      <a href="/start-here/" class="btn btn-outline btn-lg">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h16M2 10h12M2 16h16"/><circle cx="16" cy="9" r="3"/></svg>
+        See Your Legal Pathway
+      </a>
     </div>
-    <div style="margin-top:20px;display:flex;gap:16px;flex-wrap:wrap;">
-      <a href="/for-executors/" style="color:rgba(255,255,255,0.7);font-size:0.85rem;">For Executors →</a>
-      <a href="/for-beneficiaries/" style="color:rgba(255,255,255,0.7);font-size:0.85rem;">For Beneficiaries →</a>
-      <a href="/nsw/" style="color:rgba(255,255,255,0.7);font-size:0.85rem;">NSW Law →</a>
-      <a href="/qld/" style="color:rgba(255,255,255,0.7);font-size:0.85rem;">QLD Law →</a>
+    <div class="hero-links">
+      <a href="/for-executors/"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg> For Executors</a>
+      <a href="/for-beneficiaries/"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg> For Beneficiaries</a>
+      <a href="/nsw/"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg> NSW Law</a>
+      <a href="/qld/"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg> QLD Law</a>
     </div>
   </div>
 </section>
@@ -99,72 +117,84 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- TRIAGE CARDS -->
 <section class="section">
   <div class="section-inner">
-    <h2 class="section-title">What brings you here?</h2>
-    <p class="section-subtitle">Choose the situation closest to yours. Each path leads to specific information for your circumstances.</p>
-    <div class="card-grid card-grid-3">
+    <h2 class="section-title reveal">What brings you here?</h2>
+    <p class="section-subtitle reveal">Choose the situation closest to yours. Each path leads to specific information for your circumstances.</p>
+    <div class="card-grid card-grid-3 reveal-stagger">
       <div class="card triage-card">
         <h3>I think a will was changed unfairly</h3>
         <p>Last-minute changes, new beneficiaries appearing, elderly relative isolated from family — these are common warning signs of undue influence or coercion.</p>
-        <a href="/services/undue-influence-wills/" class="btn btn-dark btn-sm">Undue Influence →</a>
+        <a href="/services/undue-influence-wills/" class="btn btn-dark btn-sm">Undue Influence <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card triage-card">
         <h3>I'm an executor facing allegations</h3>
         <p>Being accused of misconduct, delay, or self-dealing is serious. You need to understand your duties and how to protect yourself while administering the estate.</p>
-        <a href="/for-executors/executor-accused-of-misconduct/" class="btn btn-dark btn-sm">Accused Executor Help →</a>
+        <a href="/for-executors/executor-accused-of-misconduct/" class="btn btn-dark btn-sm">Accused Executor Help <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card triage-card">
         <h3>I'm a beneficiary and something feels wrong</h3>
         <p>Delay, secrecy, unexplained distributions — beneficiaries have specific rights to information and transparency. You may be able to act.</p>
-        <a href="/services/beneficiary-rights/" class="btn btn-dark btn-sm">Beneficiary Rights →</a>
+        <a href="/services/beneficiary-rights/" class="btn btn-dark btn-sm">Beneficiary Rights <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card triage-card urgent">
         <h3>I'm worried an elderly person is being pressured</h3>
         <p>Elder financial abuse often involves inheritance pressure, isolation, and misuse of power of attorney. Quick action can protect assets before it's too late.</p>
-        <a href="/services/elder-financial-abuse-inheritance/" class="btn btn-primary btn-sm">Elder Abuse Help →</a>
+        <a href="/services/elder-financial-abuse-inheritance/" class="btn btn-primary btn-sm">Elder Abuse Help <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card triage-card urgent">
         <h3>I need urgent help before assets move</h3>
         <p>If you believe estate assets are being hidden, transferred, or dissipated — speed matters. Protective steps may be available through the court.</p>
-        <a href="/services/urgent-estate-protection/" class="btn btn-primary btn-sm">Urgent Protection →</a>
+        <a href="/services/urgent-estate-protection/" class="btn btn-primary btn-sm">Urgent Protection <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card triage-card">
         <h3>I need NSW or QLD specific advice</h3>
         <p>The law is different in each state. NSW operates under the Succession Act 2006; Queensland under the Succession Act 1981. Choose your state.</p>
-        <a href="/nsw/" class="btn btn-dark btn-sm">NSW Hub</a> <a href="/qld/" class="btn btn-dark btn-sm" style="margin-left:4px;">QLD Hub</a>
+        <a href="/nsw/" class="btn btn-dark btn-sm">NSW Hub</a>
+        <a href="/qld/" class="btn btn-dark btn-sm" style="margin-left:4px;">QLD Hub</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION ORNAMENT -->
+<div class="section-ornament"><span class="ornament-line"></span><span class="ornament-dot"></span><span class="ornament-line"></span></div>
+
 <!-- PROBLEM OVERVIEW -->
 <section class="section section-alt">
   <div class="section-inner">
-    <h2 class="section-title">Estate and probate disputes we handle</h2>
-    <p class="section-subtitle">These are serious legal problems that affect real families. Each requires specific knowledge of succession law, evidence rules, and court process.</p>
-    <div class="card-grid card-grid-2" style="margin-bottom:0;">
+    <h2 class="section-title reveal">Estate and probate disputes we handle</h2>
+    <p class="section-subtitle reveal">These are serious legal problems that affect real families. Each requires specific knowledge of succession law, evidence rules, and court process.</p>
+    <div class="card-grid card-grid-2 reveal-stagger">
       <div class="card">
-        <div class="card-icon">📜</div>
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 11h3"/></svg>
+        </div>
         <h3>Estate Fraud</h3>
         <p>Fraudulent conduct affecting estates, inheritances, and estate administration — including forged documents, hidden assets, unauthorised transfers, and false representations to family or court.</p>
-        <a href="/services/estate-fraud/" class="card-link">Estate fraud explained →</a>
+        <a href="/services/estate-fraud/" class="card-link">Estate fraud explained <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
-        <div class="card-icon">⚖️</div>
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </div>
         <h3>Probate Fraud</h3>
         <p>Fraud connected to probate applications — grants obtained through false or incomplete information, concealed later wills, undisclosed assets, and misuse of the probate process itself.</p>
-        <a href="/services/probate-fraud/" class="card-link">Probate fraud explained →</a>
+        <a href="/services/probate-fraud/" class="card-link">Probate fraud explained <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
-        <div class="card-icon">🔒</div>
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+        </div>
         <h3>Undue Influence & Coercion</h3>
         <p>In probate law, undue influence means coercion that overbears the will-maker's free intention — not just family persuasion or pressure. Proving it is difficult and evidence-heavy.</p>
-        <a href="/services/undue-influence-wills/" class="card-link">Undue influence explained →</a>
+        <a href="/services/undue-influence-wills/" class="card-link">Undue influence explained <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
-        <div class="card-icon">👤</div>
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <h3>Executor Misconduct</h3>
         <p>Executors have strict fiduciary duties. Delay, self-dealing, failure to account, improper distribution, and conflicts of interest are common grounds for complaint or removal.</p>
-        <a href="/services/executor-misconduct/" class="card-link">Executor misconduct explained →</a>
+        <a href="/services/executor-misconduct/" class="card-link">Executor misconduct explained <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
     </div>
   </div>
@@ -173,15 +203,57 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- SERVICES GRID -->
 <section class="section">
   <div class="section-inner">
-    <h2 class="section-title">How we help</h2>
-    <p class="section-subtitle">Focused practice areas for estate and probate disputes in NSW and Queensland.</p>
-    <div class="card-grid card-grid-3">
-      <div class="card"><h3>Challenging a Will</h3><p>Grounds include undue influence, lack of capacity, fraud, forgery, suspicious circumstances, and lack of knowledge and approval.</p><a href="/services/challenging-a-will/" class="card-link">Learn more →</a></div>
-      <div class="card"><h3>Defending a Will</h3><p>For executors or beneficiaries defending a valid will against allegations. Evidence of independent decision-making is critical.</p><a href="/services/defending-a-will/" class="card-link">Learn more →</a></div>
-      <div class="card"><h3>Elder Financial Abuse</h3><p>Inheritance pressure, carer manipulation, POA misuse, and suspicious transactions. Support pathways including 1800 ELDERHelp.</p><a href="/services/elder-financial-abuse-inheritance/" class="card-link">Learn more →</a></div>
-      <div class="card"><h3>Beneficiary Rights</h3><p>What beneficiaries can ask about, what they cannot control, how to raise concerns, and when court action may be needed.</p><a href="/services/beneficiary-rights/" class="card-link">Learn more →</a></div>
-      <div class="card"><h3>Power of Attorney Abuse</h3><p>How POA misuse affects estates — before-death depletion, suspicious will changes, and QCAT/NCAT tribunal pathways.</p><a href="/services/power-of-attorney-abuse-estates/" class="card-link">Learn more →</a></div>
-      <div class="card"><h3>Capacity & Suspicious Wills</h3><p>Dementia, illness, last-minute changes — the Banks v Goodfellow test, medical evidence, and the suspicious circumstances doctrine.</p><a href="/services/capacity-suspicious-will-changes/" class="card-link">Learn more →</a></div>
+    <h2 class="section-title reveal">How we help</h2>
+    <p class="section-subtitle reveal">Focused practice areas for estate and probate disputes in NSW and Queensland.</p>
+    <div class="card-grid card-grid-3 reveal-stagger">
+      <div class="card">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/></svg>
+        </div>
+        <h3>Challenging a Will</h3>
+        <p>Grounds include undue influence, lack of capacity, fraud, forgery, suspicious circumstances, and lack of knowledge and approval.</p>
+        <a href="/services/challenging-a-will/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Defending a Will</h3>
+        <p>For executors or beneficiaries defending a valid will against allegations. Evidence of independent decision-making is critical.</p>
+        <a href="/services/defending-a-will/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-red">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Elder Financial Abuse</h3>
+        <p>Inheritance pressure, carer manipulation, POA misuse, and suspicious transactions. Support pathways including 1800 ELDERHelp.</p>
+        <a href="/services/elder-financial-abuse-inheritance/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <h3>Beneficiary Rights</h3>
+        <p>What beneficiaries can ask about, what they cannot control, how to raise concerns, and when court action may be needed.</p>
+        <a href="/services/beneficiary-rights/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="7" y1="16" x2="12" y2="16"/></svg>
+        </div>
+        <h3>Power of Attorney Abuse</h3>
+        <p>How POA misuse affects estates — before-death depletion, suspicious will changes, and QCAT/NCAT tribunal pathways.</p>
+        <a href="/services/power-of-attorney-abuse-estates/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Capacity & Suspicious Wills</h3>
+        <p>Dementia, illness, last-minute changes — the Banks v Goodfellow test, medical evidence, and the suspicious circumstances doctrine.</p>
+        <a href="/services/capacity-suspicious-will-changes/" class="card-link">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
@@ -189,49 +261,70 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- AUDIENCE PATHWAYS -->
 <section class="section section-alt">
   <div class="section-inner">
-    <h2 class="section-title">Who we help</h2>
-    <div class="card-grid card-grid-2">
+    <h2 class="section-title reveal">Who we help</h2>
+    <div class="card-grid card-grid-2 reveal-stagger">
       <div class="card">
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
         <h3>Executors</h3>
         <p>Guidance on your duties and obligations, what you can and cannot do, and how to protect yourself if allegations are made against you. Includes probate timing, disputes with beneficiaries, and defending valid wills.</p>
-        <a href="/for-executors/" class="btn btn-dark btn-sm">Executor Resources →</a>
+        <a href="/for-executors/" class="btn btn-dark btn-sm">Executor Resources <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <h3>Beneficiaries</h3>
         <p>Understanding your rights to information, what beneficiaries can request, what you cannot control directly, and when to seek advice about executor delay, non-disclosure, or suspicious conduct.</p>
-        <a href="/for-beneficiaries/" class="btn btn-dark btn-sm">Beneficiary Resources →</a>
+        <a href="/for-beneficiaries/" class="btn btn-dark btn-sm">Beneficiary Resources <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </div>
         <h3>Family Members & Concerned Supporters</h3>
         <p>For siblings, adult children, carers, or supporters worried about manipulation of an elderly person, isolation, unusual will changes, or misuse of power of attorney.</p>
-        <a href="/for-families/" class="btn btn-dark btn-sm">Family Resources →</a>
+        <a href="/for-families/" class="btn btn-dark btn-sm">Family Resources <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
       <div class="card">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+        </div>
         <h3>Attorneys & POA Concerns</h3>
         <p>If you hold power of attorney or are concerned about its misuse, understand your obligations and the tribunal pathways available in both NSW and Queensland.</p>
-        <a href="/services/power-of-attorney-abuse-estates/" class="btn btn-dark btn-sm">POA Abuse Help →</a>
+        <a href="/services/power-of-attorney-abuse-estates/" class="btn btn-dark btn-sm">POA Abuse Help <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION ORNAMENT -->
+<div class="section-ornament"><span class="ornament-line"></span><span class="ornament-dot"></span><span class="ornament-line"></span></div>
+
 <!-- STATE FOCUS -->
 <section class="section">
   <div class="section-inner">
-    <h2 class="section-title">NSW & QLD: Different laws, different processes</h2>
-    <p class="section-subtitle">Estate and probate law is state-specific. What applies in NSW may not apply in Queensland.</p>
-    <div class="card-grid card-grid-2">
-      <div class="card">
+    <h2 class="section-title reveal">NSW & QLD: Different laws, different processes</h2>
+    <p class="section-subtitle reveal">Estate and probate law is state-specific. What applies in NSW may not apply in Queensland.</p>
+    <div class="card-grid card-grid-2 reveal-stagger">
+      <div class="card" style="border-top:4px solid var(--navy);">
+        <div class="card-icon card-icon-navy">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor" stroke="none">NSW</text></svg>
+        </div>
         <h3>New South Wales</h3>
         <p>Governed by the Succession Act 2006 (NSW). Probate applications are generally expected within six months of death. The Supreme Court of NSW has specialist probate and protective lists.</p>
         <p style="font-size:0.85rem;color:var(--gray-500);">Key areas: formal probate requirements, family provision claims under Ch 3, executor removal, caveats and objections, costs (probate exception may apply).</p>
-        <a href="/nsw/" class="btn btn-dark btn-sm">NSW Law Hub →</a>
+        <a href="/nsw/" class="btn btn-dark btn-sm">NSW Law Hub <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
-      <div class="card">
+      <div class="card" style="border-top:4px solid var(--gold);">
+        <div class="card-icon card-icon-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><text x="12" y="17" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor" stroke="none">QLD</text></svg>
+        </div>
         <h3>Queensland</h3>
         <p>Governed by the Succession Act 1981 (QLD). Unique requirements including the s 10(2) positional signature rule. QCAT and the Public Guardian have roles in elder abuse and EPOA matters.</p>
         <p style="font-size:0.85rem;color:var(--gray-500);">Key areas: s 10 signature position, s 24 lost will presumption, s 18 dispensing power, Criminal Code s 488 (will forgery — 14 years), QCAT for EPOA disputes.</p>
-        <a href="/qld/" class="btn btn-dark btn-sm">QLD Law Hub →</a>
+        <a href="/qld/" class="btn btn-dark btn-sm">QLD Law Hub <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
       </div>
     </div>
   </div>
@@ -240,15 +333,51 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- RED FLAGS -->
 <section class="section section-alt">
   <div class="section-inner">
-    <h2 class="section-title">Warning signs to watch for</h2>
-    <p class="section-subtitle">These red flags commonly indicate estate fraud, probate irregularities, or elder financial abuse.</p>
-    <div class="card-grid card-grid-2">
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Sudden will changes</h3><p>A new will made shortly before death, especially after a period of illness or isolation, that benefits someone unexpectedly.</p></div>
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Isolation of the elderly person</h3><p>Family members, carers, or new acquaintances cutting off access to the person — controlling visitors, phone calls, and information.</p></div>
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Pressure from carers or relatives</h3><p>A new beneficiary controlling contact with the solicitor, being present during will instructions, or managing the person's affairs exclusively.</p></div>
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Unexplained transfers</h3><p>Large withdrawals, property transfers, or changes to account signatories in the months before or after death without clear explanation.</p></div>
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Secrecy around documents</h3><p>Original will cannot be found, copies are inconsistent, solicitor's file is missing, or someone refuses to produce documents.</p></div>
-      <div class="card" style="border-left:4px solid var(--red);"><h3>🚩 Executor delay or non-disclosure</h3><p>Months pass with no probate application, no communication, no accounting — or the executor actively refuses to provide information to beneficiaries.</p></div>
+    <h2 class="section-title reveal">Warning signs to watch for</h2>
+    <p class="section-subtitle reveal">These red flags commonly indicate estate fraud, probate irregularities, or elder financial abuse.</p>
+    <div class="card-grid card-grid-2 reveal-stagger">
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Sudden will changes
+        </h3>
+        <p>A new will made shortly before death, especially after a period of illness or isolation, that benefits someone unexpectedly.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Isolation of the elderly person
+        </h3>
+        <p>Family members, carers, or new acquaintances cutting off access to the person — controlling visitors, phone calls, and information.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Pressure from carers or relatives
+        </h3>
+        <p>A new beneficiary controlling contact with the solicitor, being present during will instructions, or managing the person's affairs exclusively.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Unexplained transfers
+        </h3>
+        <p>Large withdrawals, property transfers, or changes to account signatories in the months before or after death without clear explanation.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Secrecy around documents
+        </h3>
+        <p>Original will cannot be found, copies are inconsistent, solicitor's file is missing, or someone refuses to produce documents.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--red);padding-left:20px;">
+        <h3 style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--red)" stroke-width="2"><path d="M8 2L14 12H2L8 2Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12" r="0.5" fill="var(--red)"/></svg>
+          Executor delay or non-disclosure
+        </h3>
+        <p>Months pass with no probate application, no communication, no accounting — or the executor actively refuses to provide information to beneficiaries.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -256,20 +385,51 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- EVIDENCE TEASER -->
 <section class="section">
   <div class="section-inner">
-    <h2 class="section-title">What to gather first</h2>
-    <p class="section-subtitle">If you suspect something is wrong, gathering the right information early can make the difference. Here is what matters most:</p>
-    <div class="card-grid card-grid-4">
-      <div class="card" style="text-align:center;"><div class="card-icon">📄</div><h3>Wills & Codicils</h3><p style="font-size:0.85rem;">All versions of the will, any codicils, drafts, and solicitor correspondence about will instructions.</p><a href="/evidence/wills-and-codicils/" class="card-link">What to collect →</a></div>
-      <div class="card" style="text-align:center;"><div class="card-icon">🏥</div><h3>Medical Records</h3><p style="font-size:0.85rem;">GP notes, specialist reports, hospital records, and any cognitive assessments — particularly near the time of will changes.</p><a href="/evidence/medical-records-and-capacity/" class="card-link">What to collect →</a></div>
-      <div class="card" style="text-align:center;"><div class="card-icon">📝</div><h3>Solicitor Files</h3><p style="font-size:0.85rem;">File notes from the drafting solicitor, attendance records, correspondence, witness statements, and capacity assessments.</p><a href="/evidence/solicitor-files-and-witnesses/" class="card-link">What to collect →</a></div>
-      <div class="card" style="text-align:center;"><div class="card-icon">🏦</div><h3>Financial Records</h3><p style="font-size:0.85rem;">Bank statements, transaction histories, property transfers, and account signatory changes in the period before and after death.</p><a href="/evidence/bank-records-and-transfers/" class="card-link">What to collect →</a></div>
+    <h2 class="section-title reveal">What to gather first</h2>
+    <p class="section-subtitle reveal">If you suspect something is wrong, gathering the right information early can make the difference. Here is what matters most:</p>
+    <div class="card-grid card-grid-4 reveal-stagger">
+      <div class="card" style="text-align:center;">
+        <div class="card-icon card-icon-navy" style="margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+        </div>
+        <h3>Wills & Codicils</h3>
+        <p style="font-size:0.85rem;">All versions of the will, any codicils, drafts, and solicitor correspondence about will instructions.</p>
+        <a href="/evidence/wills-and-codicils/" class="card-link">What to collect <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon card-icon-gold" style="margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Medical Records</h3>
+        <p style="font-size:0.85rem;">GP notes, specialist reports, hospital records, and any cognitive assessments — particularly near the time of will changes.</p>
+        <a href="/evidence/medical-records-and-capacity/" class="card-link">What to collect <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon card-icon-navy" style="margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Solicitor Files</h3>
+        <p style="font-size:0.85rem;">File notes from the drafting solicitor, attendance records, correspondence, witness statements, and capacity assessments.</p>
+        <a href="/evidence/solicitor-files-and-witnesses/" class="card-link">What to collect <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon card-icon-gold" style="margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="12" y1="2" x2="12" y2="6"/><path d="M7 12h10M7 16h6"/></svg>
+        </div>
+        <h3>Financial Records</h3>
+        <p style="font-size:0.85rem;">Bank statements, transaction histories, property transfers, and account signatory changes in the period before and after death.</p>
+        <a href="/evidence/bank-records-and-transfers/" class="card-link">What to collect <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5,3 10,7 5,11"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION ORNAMENT -->
+<div class="section-ornament"><span class="ornament-line"></span><span class="ornament-dot"></span><span class="ornament-line"></span></div>
+
 <!-- PROCESS PREVIEW -->
 <section class="section section-alt">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <h2 class="section-title">How we approach estate disputes</h2>
     <div class="process-steps">
       <div class="process-step">
@@ -293,44 +453,47 @@ document.addEventListener('DOMContentLoaded', function(){
         <p>Estate administration continues. We manage the legal strategy while the estate moves toward resolution.</p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:24px;"><a href="/process/" class="btn btn-dark">See Full Process →</a></div>
+    <div style="text-align:center;margin-top:24px;"><a href="/process/" class="btn btn-dark">See Full Process <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,3 11,8 6,13"/></svg></a></div>
   </div>
 </section>
 
 <!-- FAQ PREVIEW -->
 <section class="section">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <h2 class="section-title">Common questions</h2>
     <div class="faq-item">
-      <button class="faq-question">What is the difference between estate fraud and probate fraud? <span>+</span></button>
+      <button class="faq-question">What is the difference between estate fraud and probate fraud? <span class="faq-icon"></span></button>
       <div class="faq-answer"><p>Estate fraud covers fraudulent conduct affecting estates broadly — forged documents, hidden assets, unauthorised transfers, and misuse of authority. Probate fraud is narrower — fraud connected to the probate application itself, such as false affidavits, concealed later wills, or grants obtained through misleading the court. Both are serious and can result in the grant being revoked.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">How do you prove undue influence in a will dispute? <span>+</span></button>
+      <button class="faq-question">How do you prove undue influence in a will dispute? <span class="faq-icon"></span></button>
       <div class="faq-answer"><p>Probate undue influence requires proof of coercion — that the will-maker's free will was overborne. It is not enough to show persuasion, family pressure, or opportunity. Evidence typically includes: the relationship between the influencer and the deceased, the deceased's vulnerability (age, illness, dependency), the influencer's opportunity to control the will-making process, and the result being inexplicable by ordinary motives. The burden of proof generally falls on the person alleging undue influence.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">Can a beneficiary force an executor to provide information? <span>+</span></button>
+      <button class="faq-question">Can a beneficiary force an executor to provide information? <span class="faq-icon"></span></button>
       <div class="faq-answer"><p>Beneficiaries have rights to certain information about the estate administration, but those rights are not unlimited. An executor must keep proper accounts and provide them to residuary beneficiaries. If an executor refuses to communicate or provide information, beneficiaries may have grounds to seek court orders for disclosure, or in serious cases, for the executor's removal.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">What should I do if I suspect elder financial abuse? <span>+</span></button>
+      <button class="faq-question">What should I do if I suspect elder financial abuse? <span class="faq-icon"></span></button>
       <div class="faq-answer"><p>Act quickly. Document what you have observed — dates, conversations, financial transactions, changes in behaviour. Do not alert the suspected abuser without advice. Contact 1800 ELDERHelp (1800 353 374) for support and referral. Seek legal advice about your options, which may include urgent court applications, reporting to the Public Guardian (QLD) or NSW Trustee & Guardian, or QCAT/NCAT proceedings to review an enduring power of attorney.</p></div>
     </div>
-    <div style="text-align:center;margin-top:32px;"><a href="/faqs/" class="btn btn-dark">See All FAQs →</a></div>
+    <div style="text-align:center;margin-top:32px;"><a href="/faqs/" class="btn btn-ghost">See All FAQs <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,3 11,8 6,13"/></svg></a></div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="section section-dark">
-  <div class="section-inner" style="text-align:center;">
+  <div class="section-inner reveal" style="text-align:center;">
     <h2 class="section-title">Confidential estate dispute review</h2>
-    <p class="section-subtitle" style="margin:0 auto 24px;">Every matter starts with a confidential discussion. We will tell you honestly whether you have a legal pathway worth pursuing — and what it will involve.</p>
+    <p class="section-subtitle" style="margin:0 auto 32px;max-width:560px;">Every matter starts with a confidential discussion. We will tell you honestly whether you have a legal pathway worth pursuing — and what it will involve.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="/contact/" class="btn btn-primary btn-lg">Book a Confidential Review</a>
+      <a href="/contact/" class="btn btn-primary btn-lg">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="16" height="12" rx="2"/><polyline points="2,6 10,12 18,6"/></svg>
+        Book a Confidential Review
+      </a>
       <a href="/urgent-help/" class="btn btn-outline btn-lg">Urgent Probate Dispute</a>
     </div>
-    <p style="margin-top:16px;font-size:0.85rem;opacity:0.7;">Phone consultations available. NSW and Queensland matters only.</p>
+    <p style="margin-top:20px;font-size:0.85rem;opacity:0.7;">Phone consultations available. NSW and Queensland matters only.</p>
   </div>
 </section>
 
@@ -376,6 +539,86 @@ document.addEventListener('DOMContentLoaded', function(){
     <p style="margin-top:8px;">&copy; 2026 National Crime Stats. All rights reserved. &nbsp;|&nbsp; <a href="/disclaimer/">Disclaimer</a> &nbsp;|&nbsp; <a href="/privacy/">Privacy</a> &nbsp;|&nbsp; <a href="/terms/">Terms</a> &nbsp;|&nbsp; <a href="/accessibility/">Accessibility</a></p>
   </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ── FAQ Accordion ──
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      // Open clicked (unless it was already open)
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // ── Mobile Nav ──
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.style.display === 'flex';
+      nav.style.display = isOpen ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '100%';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'white';
+      nav.style.padding = '20px';
+      nav.style.borderBottom = '1px solid var(--border)';
+      nav.style.boxShadow = 'var(--shadow-md)';
+      nav.style.zIndex = '99';
+    });
+  }
+
+  // ── Scroll Reveal ──
+  const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Single reveals
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Staggered reveals: observe parent, then cascade children
+  document.querySelectorAll('.reveal-stagger').forEach(parent => {
+    const children = Array.from(parent.children);
+    revealObserver.observe(parent);
+    // When parent becomes visible, stagger the children
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          children.forEach((child, i) => {
+            child.style.transition = 'opacity 0.5s cubic-bezier(0.4,0,0.2,1) ' + (i * 0.08) + 's, transform 0.5s cubic-bezier(0.4,0,0.2,1) ' + (i * 0.08) + 's';
+            child.classList.add('visible');
+          });
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    staggerObserver.observe(parent);
+  });
+
+  // ── Active nav state ──
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.primary-nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
+});
+</script>
 
 </body>
 </html>
