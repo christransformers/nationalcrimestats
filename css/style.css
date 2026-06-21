@@ -6,7 +6,7 @@
 
 :root {
   /* ═══════════════════════════════════════════════════════
-     DESIGN TOKENS — derived from ncs_logo.png
+     DESIGN TOKENS — gold structural + green accent (swapped per user request)
      nationalcrimestats.com.au
      ═══════════════════════════════════════════════════════ */
 
@@ -15,21 +15,21 @@
   --bg-primary-off: #F8F9FA;
 
   /* Structural anchors — 30% of site surface (header, footer, hero) */
-  --bg-structural: #0D3823;
-  --bg-structural-light: #134A2F;
-  --bg-structural-lighter: #1A5C3B;
+  --bg-structural: #5C4400;
+  --bg-structural-light: #7A5D0A;
+  --bg-structural-lighter: #9C7A1A;
 
   /* Text */
-  --text-primary: #0A2215;
-  --text-muted: #677A70;
+  --text-primary: #3D2B0F;
+  --text-muted: #8B7E6B;
   --text-on-dark: rgba(255,255,255,0.92);
   --text-on-dark-muted: rgba(255,255,255,0.65);
 
   /* Gold accents */
-  --accent-gold: #A8894E;
-  --accent-gold-pale: #F5F0E6;
-  --cta-gold: #D1B471;
-  --cta-gold-hover: #DEC68A;
+  --accent-gold: #0D3823;
+  --accent-gold-pale: #E8F5E9;
+  --cta-gold: #134A2F;
+  --cta-gold-hover: #1A5C3B;
 
   /* Semantic */
   --white: #ffffff;
@@ -53,7 +53,7 @@
 
   /* Borders */
   --border: #e5e7eb;
-  --border-gold: rgba(168,137,78,0.25);
+  --border-gold: rgba(92,68,0,0.25);
 
   /* Legacy aliases (backward compat during transition) */
   --navy: var(--bg-structural);
@@ -70,7 +70,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-  --shadow-gold: 0 6px 20px rgba(168,137,78,0.25);
+  --shadow-gold: 0 6px 20px rgba(92,68,0,0.25);
 
   /* Geometry */
   --radius: 6px;
@@ -339,7 +339,7 @@ h1, .hero h1, .page-hero h1 {
   top: 0; right: 0; bottom: 0;
   width: 45%;
   background:
-    radial-gradient(circle at 30% 40%, rgba(209,180,113,0.08) 0%, transparent 60%),
+    radial-gradient(circle at 30% 40%, rgba(19,74,47,0.08) 0%, transparent 60%),
     radial-gradient(circle at 70% 70%, rgba(255,255,255,0.04) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -447,7 +447,7 @@ h1, .hero h1, .page-hero h1 {
 .btn-dark:hover {
   background: var(--bg-structural-light);
   border-color: var(--bg-structural-light);
-  box-shadow: 0 4px 14px rgba(13,56,35,0.25);
+  box-shadow: 0 4px 14px rgba(92,68,0,0.25);
   transform: translateY(-1px);
 }
 .btn-ghost {
@@ -1061,7 +1061,7 @@ h1, .hero h1, .page-hero h1 {
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0 auto 14px;
-  box-shadow: 0 4px 12px rgba(168,137,78,0.25);
+  box-shadow: 0 4px 12px rgba(92,68,0,0.25);
   transition: transform var(--transition);
 }
 .process-step:hover::before {
@@ -1100,7 +1100,7 @@ h1, .hero h1, .page-hero h1 {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-gold);
-  box-shadow: 0 0 0 3px rgba(168,137,78,0.1);
+  box-shadow: 0 0 0 3px rgba(13,56,35,0.1);
 }
 
 /* ============================================================
