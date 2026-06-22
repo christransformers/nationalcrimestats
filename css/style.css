@@ -1,35 +1,37 @@
 /* ============================================================
    NATIONALCRIMESTATS.COM.AU
    Estate Fraud & Probate Dispute Lawyers NSW + QLD
-   Enhanced with claude-design taste principles
+   Color theme: Deep Forest Green + Gold accent, white canvas
    ============================================================ */
 
 :root {
   /* ═══════════════════════════════════════════════════════
-     DESIGN TOKENS — gold structural + green accent (swapped per user request)
-     nationalcrimestats.com.au
+     DESIGN TOKENS — 60/30/10 palette
+     60% White (#ffffff) — page backgrounds, cards, body sections
+     30% Deep Forest Green (#1a3a2a) — nav, footer, hero, dividers
+     10% Gold/Olive (#c8a84b) — CTA buttons, active links, accent text, hover, icons
      ═══════════════════════════════════════════════════════ */
 
-  /* Canvas — 60% of site surface */
+  /* Canvas — 60% */
   --bg-primary: #FFFFFF;
-  --bg-primary-off: #F8F9FA;
+  --bg-primary-off: #f9fafb;
 
-  /* Structural anchors — 30% of site surface (header, footer, hero) */
-  --bg-structural: #5C4400;
-  --bg-structural-light: #7A5D0A;
-  --bg-structural-lighter: #9C7A1A;
+  /* Structural anchors — 30% Deep Forest Green */
+  --bg-structural: #1a3a2a;
+  --bg-structural-light: #234f38;
+  --bg-structural-lighter: #2c6044;
 
   /* Text */
-  --text-primary: #3D2B0F;
-  --text-muted: #8B7E6B;
-  --text-on-dark: rgba(255,255,255,0.92);
-  --text-on-dark-muted: rgba(255,255,255,0.65);
+  --text-primary: #1a3a2a;
+  --text-muted: #6b7280;
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: rgba(255,255,255,0.75);
 
-  /* Gold accents */
-  --accent-gold: #0D3823;
-  --accent-gold-pale: #E8F5E9;
-  --cta-gold: #134A2F;
-  --cta-gold-hover: #1A5C3B;
+  /* Gold accents — 10% */
+  --accent-gold: #c8a84b;
+  --accent-gold-pale: #f5f0e0;
+  --cta-gold: #c8a84b;
+  --cta-gold-hover: #b89730;
 
   /* Semantic */
   --white: #ffffff;
@@ -37,7 +39,6 @@
   --red-light: #fef2f2;
   --green: #166534;
   --green-light: #f0fdf4;
-  --blue-light: #eff6ff;
 
   /* Grays */
   --gray-50: #f9fafb;
@@ -53,9 +54,9 @@
 
   /* Borders */
   --border: #e5e7eb;
-  --border-gold: rgba(92,68,0,0.25);
+  --border-gold: rgba(200,168,75,0.25);
 
-  /* Legacy aliases (backward compat during transition) */
+  /* Legacy aliases */
   --navy: var(--bg-structural);
   --navy-light: var(--bg-structural-light);
   --navy-lighter: var(--bg-structural-lighter);
@@ -70,7 +71,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-  --shadow-gold: 0 6px 20px rgba(92,68,0,0.25);
+  --shadow-gold: 0 6px 20px rgba(200,168,75,0.25);
 
   /* Geometry */
   --radius: 6px;
@@ -90,7 +91,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
-  color: var(--text-primary);
+  color: var(--text-muted);
   background: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
 }
@@ -151,7 +152,7 @@ h1, .hero h1, .page-hero h1 {
   font-size: 1.5rem;
 }
 .card-icon-gold { background: var(--gold-pale); color: var(--gold); }
-.card-icon-navy { background: var(--blue-light); color: var(--navy); }
+.card-icon-navy { background: #e6f0ea; color: var(--navy); }
 .card-icon-red { background: var(--red-light); color: var(--red); }
 
 /* ============================================================
@@ -251,7 +252,7 @@ h1, .hero h1, .page-hero h1 {
 }
 .nav-cta {
   background: var(--cta-gold) !important;
-  color: var(--text-primary) !important;
+  color: #1a3a2a !important;
   font-weight: 600 !important;
   padding: 8px 16px !important;
   margin-left: 4px;
@@ -277,7 +278,7 @@ h1, .hero h1, .page-hero h1 {
 }
 .mobile-nav-toggle:hover { color: var(--cta-gold); }
 
-/* Mobile nav — dark overlay matching header */
+/* Mobile nav */
 @media (max-width: 768px) {
   .primary-nav.mobile-open {
     display: flex !important;
@@ -339,7 +340,7 @@ h1, .hero h1, .page-hero h1 {
   top: 0; right: 0; bottom: 0;
   width: 45%;
   background:
-    radial-gradient(circle at 30% 40%, rgba(19,74,47,0.08) 0%, transparent 60%),
+    radial-gradient(circle at 30% 40%, rgba(200,168,75,0.08) 0%, transparent 60%),
     radial-gradient(circle at 70% 70%, rgba(255,255,255,0.04) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -420,7 +421,7 @@ h1, .hero h1, .page-hero h1 {
 .btn:active { transform: scale(0.97); }
 .btn-primary {
   background: var(--cta-gold);
-  color: var(--text-primary);
+  color: #1a3a2a;
   border-color: var(--cta-gold);
 }
 .btn-primary:hover {
@@ -447,7 +448,7 @@ h1, .hero h1, .page-hero h1 {
 .btn-dark:hover {
   background: var(--bg-structural-light);
   border-color: var(--bg-structural-light);
-  box-shadow: 0 4px 14px rgba(92,68,0,0.25);
+  box-shadow: 0 4px 14px rgba(26,58,42,0.25);
   transform: translateY(-1px);
 }
 .btn-ghost {
@@ -564,7 +565,7 @@ h1, .hero h1, .page-hero h1 {
   gap: 4px;
   transition: gap var(--transition), color var(--transition);
 }
-.card-link:hover { gap: 8px; text-decoration: none; color: var(--cta-gold); }
+.card-link:hover { gap: 8px; text-decoration: none; color: var(--cta-gold-hover); }
 
 /* Triage cards (homepage) */
 .triage-card {
@@ -573,7 +574,7 @@ h1, .hero h1, .page-hero h1 {
   transition: all var(--transition-slow);
 }
 .triage-card:hover {
-  border-left-color: var(--cta-gold);
+  border-left-color: var(--cta-gold-hover);
   box-shadow: var(--shadow-lg);
 }
 .triage-card.urgent {
@@ -602,7 +603,7 @@ h1, .hero h1, .page-hero h1 {
   position: absolute;
   top: 0; right: 0; bottom: 0;
   width: 35%;
-  background: radial-gradient(circle at 40% 50%, rgba(209,180,113,0.06) 0%, transparent 60%);
+  background: radial-gradient(circle at 40% 50%, rgba(200,168,75,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .page-hero-inner {
@@ -811,7 +812,7 @@ h1, .hero h1, .page-hero h1 {
   position: absolute;
   top: 0; right: 0;
   width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(209,180,113,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200,168,75,0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 .cta-block h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--white); position: relative; }
@@ -846,7 +847,7 @@ h1, .hero h1, .page-hero h1 {
   border-bottom: 1px solid var(--gray-100);
 }
 .checklist li::before {
-  content: "☐";
+  content: "\2610";
   position: absolute;
   left: 0;
   color: var(--accent-gold);
@@ -869,7 +870,7 @@ h1, .hero h1, .page-hero h1 {
   box-shadow: var(--shadow-md);
 }
 .rail-cta h4 { font-size: 0.95rem; margin-bottom: 12px; color: var(--white); }
-.rail-cta .btn { background: var(--white); color: var(--text-primary); border-color: var(--white); font-size: 0.85rem; }
+.rail-cta .btn { background: var(--white); color: #1a3a2a; border-color: var(--white); font-size: 0.85rem; }
 
 .rail-toc {
   background: var(--gray-50);
@@ -1061,7 +1062,7 @@ h1, .hero h1, .page-hero h1 {
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0 auto 14px;
-  box-shadow: 0 4px 12px rgba(92,68,0,0.25);
+  box-shadow: 0 4px 12px rgba(200,168,75,0.25);
   transition: transform var(--transition);
 }
 .process-step:hover::before {
@@ -1100,11 +1101,11 @@ h1, .hero h1, .page-hero h1 {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-gold);
-  box-shadow: 0 0 0 3px rgba(13,56,35,0.1);
+  box-shadow: 0 0 0 3px rgba(200,168,75,0.15);
 }
 
 /* ============================================================
-   HERO BACKGROUND IMAGE
+   HERO BACKGROUND IMAGE OVERLAY
    ============================================================ */
 .hero.has-bg {
   background-size: cover;
@@ -1116,7 +1117,7 @@ h1, .hero h1, .page-hero h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13,56,35,0.92) 0%, rgba(13,56,35,0.78) 50%, rgba(13,56,35,0.55) 100%);
+  background: linear-gradient(135deg, rgba(26,58,42,0.92) 0%, rgba(26,58,42,0.78) 50%, rgba(26,58,42,0.55) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1133,7 +1134,7 @@ h1, .hero h1, .page-hero h1 {
   background-repeat: no-repeat;
 }
 .page-hero.has-bg::after {
-  background: linear-gradient(135deg, rgba(13,56,35,0.9) 0%, rgba(13,56,35,0.7) 60%, rgba(13,56,35,0.45) 100%);
+  background: linear-gradient(135deg, rgba(26,58,42,0.9) 0%, rgba(26,58,42,0.7) 60%, rgba(26,58,42,0.45) 100%);
 }
 
 /* ============================================================
@@ -1153,7 +1154,7 @@ h1, .hero h1, .page-hero h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(13,56,35,0.55);
+  background: rgba(26,58,42,0.55);
   pointer-events: none;
 }
 .section-banner.section-banner-light::after {
@@ -1203,7 +1204,7 @@ h1, .hero h1, .page-hero h1 {
 .card-thumb-body h3 { margin-top: 0; }
 
 /* ============================================================
-   CONTENT IMAGE (in content-main)
+   CONTENT IMAGE
    ============================================================ */
 .content-img {
   max-width: 100%;
@@ -1254,7 +1255,7 @@ h1, .hero h1, .page-hero h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(13,56,35,0.85) 0%, rgba(13,56,35,0.3) 60%, rgba(13,56,35,0.05) 100%);
+  background: linear-gradient(to right, rgba(26,58,42,0.85) 0%, rgba(26,58,42,0.3) 60%, rgba(26,58,42,0.05) 100%);
 }
 .img-callout-full .img-callout-content {
   position: relative;
@@ -1329,7 +1330,7 @@ h1, .hero h1, .page-hero h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(13,56,35,0.92);
+  background: rgba(26,58,42,0.92);
   pointer-events: none;
 }
 .site-footer.has-bg .footer-inner,
@@ -1355,7 +1356,7 @@ h1, .hero h1, .page-hero h1 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13,56,35,0.88) 0%, rgba(13,56,35,0.6) 100%);
+  background: linear-gradient(135deg, rgba(26,58,42,0.88) 0%, rgba(26,58,42,0.6) 100%);
 }
 .announcement-banner .announcement-content {
   position: relative;
